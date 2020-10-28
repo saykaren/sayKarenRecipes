@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sayKarenRecipes/static/css/main.991043f3.chunk.css",
+    "main.js": "/sayKarenRecipes/static/js/main.257575a6.chunk.js",
+    "main.js.map": "/sayKarenRecipes/static/js/main.257575a6.chunk.js.map",
+    "runtime-main.js": "/sayKarenRecipes/static/js/runtime-main.4c49bc98.js",
+    "runtime-main.js.map": "/sayKarenRecipes/static/js/runtime-main.4c49bc98.js.map",
+    "static/js/2.17a84089.chunk.js": "/sayKarenRecipes/static/js/2.17a84089.chunk.js",
+    "static/js/2.17a84089.chunk.js.map": "/sayKarenRecipes/static/js/2.17a84089.chunk.js.map",
+    "static/js/3.c2afb13f.chunk.js": "/sayKarenRecipes/static/js/3.c2afb13f.chunk.js",
+    "static/js/3.c2afb13f.chunk.js.map": "/sayKarenRecipes/static/js/3.c2afb13f.chunk.js.map",
+    "index.html": "/sayKarenRecipes/index.html",
+    "static/css/main.991043f3.chunk.css.map": "/sayKarenRecipes/static/css/main.991043f3.chunk.css.map",
+    "static/js/2.17a84089.chunk.js.LICENSE.txt": "/sayKarenRecipes/static/js/2.17a84089.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4c49bc98.js",
+    "static/js/2.17a84089.chunk.js",
+    "static/css/main.991043f3.chunk.css",
+    "static/js/main.257575a6.chunk.js"
+  ]
+}
