@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import RecipeData from '../data/data';
 import RecipeDataInterface from '../Interface/RecipeDataInterface';
 
@@ -7,23 +7,33 @@ interface RecipeSectionProps {
 }
 
 const RecipeSection = () => {
-  console.log(RecipeData);
   const [data, setData] = useState(RecipeData);
-  const [active, setActive] = useState(true);
+  const [loading, setLoading] = useState(false);
 
-  const toggle = (indexNumber: number)=>{
-    const activity = data[indexNumber].active
-    console.log({activity});
-    // Need to set data point here
-  }
+  useEffect(() => {
+    setLoading(false);
+  });
+
+  const updateState = (indexNumber: number) => {
+    toggle(indexNumber);
+  };
+  const toggle = (indexNumber: number) => {
+    const activity = data[indexNumber].active;
+    const newData = data;
+    newData[indexNumber].active = !activity;
+    setData(newData);
+    setLoading(true);
+  };
 
   return (
     <>
+      {loading && <h2>LOADING</h2>}
       {data &&
         data.map((num, index) => (
           <div className="recipeCard">
-            {num.active && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
-            <button onClick={()=>toggle(index)}>Toggle</button>
+            {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
+            {num.active && <p>{num.ingredients[0].type}</p>}
+            <button onClick={() => updateState(index)}>Toggle</button>
           </div>
         ))}
     </>
