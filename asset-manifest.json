@@ -1,22 +1,23 @@
 {
   "files": {
-    "main.css": "/sayKarenRecipes/static/css/main.77930a10.chunk.css",
-    "main.js": "/sayKarenRecipes/static/js/main.70e59972.chunk.js",
-    "main.js.map": "/sayKarenRecipes/static/js/main.70e59972.chunk.js.map",
+    "main.css": "/sayKarenRecipes/static/css/main.8c25e37d.chunk.css",
+    "main.js": "/sayKarenRecipes/static/js/main.1d482b3f.chunk.js",
+    "main.js.map": "/sayKarenRecipes/static/js/main.1d482b3f.chunk.js.map",
     "runtime-main.js": "/sayKarenRecipes/static/js/runtime-main.acc728f6.js",
     "runtime-main.js.map": "/sayKarenRecipes/static/js/runtime-main.acc728f6.js.map",
-    "static/js/2.9b7f493b.chunk.js": "/sayKarenRecipes/static/js/2.9b7f493b.chunk.js",
-    "static/js/2.9b7f493b.chunk.js.map": "/sayKarenRecipes/static/js/2.9b7f493b.chunk.js.map",
+    "static/js/2.01c24ca4.chunk.js": "/sayKarenRecipes/static/js/2.01c24ca4.chunk.js",
+    "static/js/2.01c24ca4.chunk.js.map": "/sayKarenRecipes/static/js/2.01c24ca4.chunk.js.map",
     "static/js/3.74201d17.chunk.js": "/sayKarenRecipes/static/js/3.74201d17.chunk.js",
     "static/js/3.74201d17.chunk.js.map": "/sayKarenRecipes/static/js/3.74201d17.chunk.js.map",
     "index.html": "/sayKarenRecipes/index.html",
-    "static/css/main.77930a10.chunk.css.map": "/sayKarenRecipes/static/css/main.77930a10.chunk.css.map",
-    "static/js/2.9b7f493b.chunk.js.LICENSE.txt": "/sayKarenRecipes/static/js/2.9b7f493b.chunk.js.LICENSE.txt"
+    "static/css/main.8c25e37d.chunk.css.map": "/sayKarenRecipes/static/css/main.8c25e37d.chunk.css.map",
+    "static/js/2.01c24ca4.chunk.js.LICENSE.txt": "/sayKarenRecipes/static/js/2.01c24ca4.chunk.js.LICENSE.txt",
+    "static/media/sayKaren_logo-white_8.1.2019.a59cbdb0.png": "/sayKarenRecipes/static/media/sayKaren_logo-white_8.1.2019.a59cbdb0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.acc728f6.js",
-    "static/js/2.9b7f493b.chunk.js",
-    "static/css/main.77930a10.chunk.css",
-    "static/js/main.70e59972.chunk.js"
+    "static/js/2.01c24ca4.chunk.js",
+    "static/css/main.8c25e37d.chunk.css",
+    "static/js/main.1d482b3f.chunk.js"
   ]
 }
