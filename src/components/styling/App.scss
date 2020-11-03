@@ -1,8 +1,13 @@
 @import 'variables';
 @import 'Footer.scss';
+@import 'RecipeSection';
 
 .App {
   text-align: center;
+}
+
+html {
+  background-color: $primary-color;
 }
 
 .App-logo {
@@ -17,7 +22,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: $secondary-color;
   min-height: 10vh;
   display: flex;
   flex-direction: column;

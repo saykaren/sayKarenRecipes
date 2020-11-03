@@ -28,6 +28,7 @@ const RecipeSection = () => {
   return (
     <>
       {loading && <h2>LOADING</h2>}
+      <div className="RecipeSection">
       {data &&
         data.map((num, index) => (
           <div className="recipeCard">
@@ -36,6 +37,7 @@ const RecipeSection = () => {
             <button onClick={() => updateState(index)}>Toggle</button>
           </div>
         ))}
+      </div>
     </>
   );
 };

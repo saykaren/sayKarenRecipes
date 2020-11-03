@@ -1,6 +1,6 @@
 export const RecipeData = [
   {
-    recipeTitle: 'Potatoe Chowder',
+    recipeTitle: 'Potato Chowder',
     ingredients: [
       { type: 'Potatoes', amount: '5' },
       { type: 'Chicken Broth', amount: '4 cups' },
@@ -21,7 +21,7 @@ export const RecipeData = [
     active: false,
   },
   {
-    recipeTitle: 'Potatoe Chowder 2',
+    recipeTitle: 'Potato Chowder 2',
     ingredients: [
       { type: 'Potatoes', amount: '5' },
       { type: 'Chicken Broth', amount: '4 cups' },
