@@ -29,14 +29,35 @@ const RecipeSection = () => {
     <>
       {loading && <h2>LOADING</h2>}
       <div className="RecipeSection">
-      {data &&
-        data.map((num, index) => (
-          <div className="recipeCard">
-            {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
-            {num.active && <p>{num.ingredients[0].type}</p>}
-            <button onClick={() => updateState(index)}>Toggle</button>
-          </div>
-        ))}
+        {data &&
+          data.map((num, index) => (
+            <div className="recipeCard">
+              {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
+
+              {num.active && (
+                <>
+                  <div className={`ingredients ${index}`}>
+                    <h3>Ingredients</h3>
+                    {num.ingredients.map((ingred, indexIngred) => (
+                      <div>
+                        {ingred.type} : {ingred.amount}
+                      </div>
+                    ))}
+                  </div>
+                  <div className={`instructions ${index}`}>
+                    <h3>Instructions</h3>
+                    {num.instructions.map((instr, indexInstru) => (
+                      <div>
+                        {indexInstru + 1}. {instr}
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+
+              <button onClick={() => updateState(index)}>Toggle</button>
+            </div>
+          ))}
       </div>
     </>
   );
