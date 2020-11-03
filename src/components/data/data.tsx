@@ -255,6 +255,31 @@ export const RecipeData = [
     active: false,
   },
   {
+    recipeTitle: 'Chipotle Chicken Pasta',
+    ingredients: [
+      { type: 'Angel Hair Pasta', amount: 'Never have enough' },
+        { type: 'Roasted Red Peppers (near pickles in store)', amount: '15 ounces' },
+      { type: 'Garlic', amount: '1 Tablespoon' },
+      { type: 'Chicken-cubed', amount: '1-3' },
+      { type: 'Olive Oil', amount: '2 Tablespoons' },
+      { type: 'Heavy Cream', amount: '2 Cups' },
+      { type: 'Chipotle Spice-Ground', amount: '1 Teaspoon' },
+      { type: 'White Wine', amount: '1/2 cup' },
+      { type: 'Salt & Pepper', amount: 'To taste' },
+    ],
+    preparationTime: 30,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [],
+    instructions: [
+        'In a pan, saute the garlic, onion, chicken and reasted red peppers until the chicken is thoroughly cooked.',
+      'Add the wine (what you haven\'t gulped down while cooking), chipotle spice, salt and pepper and reduce liquid by half or 5 minutes',
+      'Add the heavy cream and simmer until it thickens a little',
+        'Add the cooked pasta noodles and toss',
+        'Eat and enjoy!!'
+    ],
+    active: false,
+  },
+  {
     recipeTitle: 'Template',
     ingredients: [{ type: '?', amount: '?' }],
     preparationTime: 0,
