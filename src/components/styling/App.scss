@@ -25,9 +25,10 @@ html {
   background-color: $secondary-color;
   min-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -43,4 +44,14 @@ html {
   to {
     transform: rotate(360deg);
   }
+}
+
+#navigation {
+  padding: 4px;
+  margin: 4px;
+  align-self: flex-start;
+}
+
+#sayKaren {
+  height: 17vh;
 }
