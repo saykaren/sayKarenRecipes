@@ -13,4 +13,10 @@
   padding: 4px;
   text-align: center;
   border-radius: 13px;
+  height: fit-content;
+}
+
+.ingredients, .instructions {
+  text-align: left;
+  padding: 10px;
 }

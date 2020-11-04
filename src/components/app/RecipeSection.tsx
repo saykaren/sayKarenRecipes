@@ -40,7 +40,7 @@ const RecipeSection = () => {
                     <h3>Ingredients</h3>
                     {num.ingredients.map((ingred, indexIngred) => (
                       <div>
-                        {ingred.type} : {ingred.amount}
+                        &#9832;{ingred.type} <b>:</b> {ingred.amount}
                       </div>
                     ))}
                   </div>
@@ -48,7 +48,7 @@ const RecipeSection = () => {
                     <h3>Instructions</h3>
                     {num.instructions.map((instr, indexInstru) => (
                       <div>
-                        {indexInstru + 1}. {instr}
+                        <b>{indexInstru + 1}.</b> {instr}<br/><br/>
                       </div>
                     ))}
                   </div>
@@ -56,7 +56,7 @@ const RecipeSection = () => {
               )}
 
               {num.active && (
-                <button onClick={() => updateState(index)}>X</button>
+                <button className='closeButton' onClick={() => updateState(index)}>&#9757;</button>
               )}
             </div>
           ))}

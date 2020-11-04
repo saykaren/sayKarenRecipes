@@ -15,7 +15,7 @@ const App = () => {
       <header className="App-header">
 
         <div id="navigation" onClick={() => toggle()}>
-          {nav ? <>&#9747;</> : <>&#9776;</>}
+          {nav ? <>&#10005;</> : <>&#9776;</>}
         </div>
         <h2> <img src={sayKarenLogo} id="sayKaren" alt="sayKaren"/>'s Recipes Box</h2>
       </header>
