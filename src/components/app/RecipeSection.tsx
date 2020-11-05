@@ -56,7 +56,7 @@ const RecipeSection = () => {
               )}
 
               {num.active && (
-                <button className='closeButton' onClick={() => updateState(index)}>&#9757;</button>
+                <div className='closeButton' onClick={() => updateState(index)}>&#8682;</div>
               )}
             </div>
           ))}
