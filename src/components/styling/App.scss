@@ -47,9 +47,20 @@ html {
 }
 
 #navigation {
+   padding: 4px;
+   margin: 4px;
+   align-self: flex-start;
+   background-color: $primary-color;
+   opacity: 0.5;
+ }
+
+#navigationActive {
   padding: 4px;
   margin: 4px;
   align-self: flex-start;
+  background-color: $primary-color;
+  opacity: 0.5;
+  width: 50%;
 }
 
 #sayKaren {

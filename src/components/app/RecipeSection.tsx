@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import RecipeData from '../data/data';
 import RecipeDataInterface from '../Interface/RecipeDataInterface';
+import Lilly_Good from '../assests/Lilly_Good.jpg';
+import Lilly_Bad from '../assests/Lilly_Bad.jpg';
 
 interface RecipeSectionProps {
-  data: Array<RecipeDataInterface>;
+  data?: Array<RecipeDataInterface>;
+  ratingShow: boolean;
 }
 
-const RecipeSection = () => {
+const RecipeSection = ({ ratingShow }: RecipeSectionProps) => {
   const [data, setData] = useState(RecipeData);
   const [loading, setLoading] = useState(false);
 
@@ -37,6 +40,14 @@ const RecipeSection = () => {
               {num.active && (
                 <>
                   <div className={`ingredients ${index}`}>
+                    {ratingShow && num.lillyRating && (
+                      <img
+                        className="LillyRating"
+                        src={num.lillyRating == 1 ? Lilly_Bad : Lilly_Good}
+                        alt="rating"
+                      />
+                    )}
+
                     <h3>Ingredients</h3>
                     {num.ingredients.map((ingred, indexIngred) => (
                       <div>
@@ -48,7 +59,9 @@ const RecipeSection = () => {
                     <h3>Instructions</h3>
                     {num.instructions.map((instr, indexInstru) => (
                       <div>
-                        <b>{indexInstru + 1}.</b> {instr}<br/><br/>
+                        <b>{indexInstru + 1}.</b> {instr}
+                        <br />
+                        <br />
                       </div>
                     ))}
                   </div>
@@ -56,7 +69,9 @@ const RecipeSection = () => {
               )}
 
               {num.active && (
-                <div className='closeButton' onClick={() => updateState(index)}>&#8682;</div>
+                <div className="closeButton" onClick={() => updateState(index)}>
+                  &#8682;
+                </div>
               )}
             </div>
           ))}

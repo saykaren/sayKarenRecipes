@@ -12,6 +12,7 @@ export interface RecipeDataInterface {
     requiredInstruments: Array<string>;
     instructions: Array<string>;
     active: boolean;
+    lillyRating?: number;
 
 }
 

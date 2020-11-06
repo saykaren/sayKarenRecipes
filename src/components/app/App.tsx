@@ -6,6 +6,7 @@ import RecipeSection from './RecipeSection';
 
 const App = () => {
   const [nav, setNav] = useState(false);
+  const [ratingShow, setRatingShow] = useState(true);
 
   const toggle = () => {
     setNav(!nav);
@@ -13,14 +14,24 @@ const App = () => {
   return (
     <>
       <header className="App-header">
-
-        <div id="navigation" onClick={() => toggle()}>
-          {nav ? <>&#10005;</> : <>&#9776;</>}
+        <div id="navigation">
+          <div onClick={() => toggle()}>
+            {nav ? <>&#10005;</> : <>&#9776;</>}
+          </div>
+          {nav && (
+            <div onClick={() => setRatingShow(!ratingShow)}>
+              Toggle Rating Image
+            </div>
+          )}
         </div>
-        <h2> <img src={sayKarenLogo} id="sayKaren" alt="sayKaren"/>'s Recipes Box</h2>
+        <h2>
+          {' '}
+          <img src={sayKarenLogo} id="sayKaren" alt="sayKaren" />
+          's Recipes Box
+        </h2>
       </header>
 
-      <RecipeSection />
+      <RecipeSection ratingShow={ratingShow} />
 
       <Footer />
     </>
