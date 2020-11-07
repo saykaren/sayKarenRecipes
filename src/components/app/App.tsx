@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <header className="App-header">
-        <div id="navigation">
+        <div id={nav ? "navigationActive" : "navigation"}>
           <div onClick={() => toggle()}>
             {nav ? <>&#10005;</> : <>&#9776;</>}
           </div>
