@@ -11,17 +11,20 @@ const App = () => {
   const toggle = () => {
     setNav(!nav);
   };
+
   return (
     <>
       <header className="App-header">
-        <div id={nav ? "navigationActive" : "navigation"}>
+        <div id={nav ? 'navigationActive' : 'navigation'}>
           <div onClick={() => toggle()}>
             {nav ? <>&#10005;</> : <>&#9776;</>}
           </div>
           {nav && (
-            <div onClick={() => setRatingShow(!ratingShow)}>
-              Toggle Rating Image
-            </div>
+            <>
+              <div onClick={() => setRatingShow(!ratingShow)}>
+                Toggle Rating Image
+              </div>
+            </>
           )}
         </div>
         <h2>

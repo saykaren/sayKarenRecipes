@@ -13,6 +13,7 @@ export interface RecipeDataInterface {
     instructions: Array<string>;
     active: boolean;
     lillyRating?: number;
+    week?: number;
 
 }
 

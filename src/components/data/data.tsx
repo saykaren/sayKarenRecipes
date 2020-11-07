@@ -27,6 +27,7 @@ export const RecipeData = [
     ],
     active: false,
     lillyRating: 2,
+    week: 3,
   },
   {
     recipeTitle: 'Chicken Enchilada Soup',
@@ -58,6 +59,7 @@ export const RecipeData = [
     ],
     active: false,
     lillyRating: 1,
+    week: 1,
   },
   {
     recipeTitle: 'White Chicken Chili',
@@ -90,6 +92,7 @@ export const RecipeData = [
     ],
     active: false,
     lillyRating: 3,
+    week: 2,
   },
   {
     recipeTitle: 'Chicken Pesto',
@@ -116,6 +119,8 @@ export const RecipeData = [
       'Add cooked Farfalle to skillet with chicken and mixture.',
     ],
     active: false,
+    lillyRating: 3,
+    week: 1,
   },
 
   {
@@ -145,6 +150,7 @@ export const RecipeData = [
       'Heat oven to cook Naan',
     ],
     active: false,
+    week: 2,
   },
   {
     recipeTitle: "Grandpa Garcia's Red Chile With Chicken",
@@ -173,6 +179,7 @@ export const RecipeData = [
       'Bring to boil and then turn down to a simmer for about 15 minutes. If it is too thick add a little water',
     ],
     active: false,
+    week: 3,
   },
   {
     recipeTitle: 'Chicken Bacon Ranch Wraps',
@@ -204,6 +211,7 @@ export const RecipeData = [
         'Top with tomatoes, green onions, and drizzle of ranch dressing'
     ],
     active: false,
+    week: 4,
   },
   {
     recipeTitle: 'Creamy Chicken Spaghetti',
@@ -256,6 +264,7 @@ export const RecipeData = [
       'Add the stir-fry veggies and pineapple and let them cook in the teriyaki sauce for about 2 minutes. Return the chicken to the pot and serve warm with brown rice.',
     ],
     active: false,
+    week: 4,
   },
   {
     recipeTitle: 'Chipotle Chicken Pasta',
@@ -281,6 +290,7 @@ export const RecipeData = [
         'Eat and enjoy!!'
     ],
     active: false,
+    week: 4,
   },
   {
     recipeTitle: 'Grandpa Garcia\'s Green Chile',
@@ -313,6 +323,7 @@ export const RecipeData = [
 
     ],
     active: false,
+    week: 3,
   },
   {
     recipeTitle: 'Grandpa Saylor\'s Famous Chili Recipe',
@@ -343,6 +354,7 @@ export const RecipeData = [
       'Karen Hack: Cut ingredients in half and throw into crockpot for 8 hours',
     ],
     active: false,
+    week: 4,
   },
   {
     recipeTitle: 'Chicken Alfredo',
@@ -374,6 +386,7 @@ export const RecipeData = [
       'Mix all together and ENJOY!',
     ],
     active: false,
+    week: 3,
   },
   {
     recipeTitle: 'Gram\'s Sloppy Joes',
@@ -392,6 +405,7 @@ export const RecipeData = [
       'Plop onto buns and you\'re golden',
     ],
     active: false,
+    week: 2,
   },
   {
     recipeTitle: 'Tacos',
@@ -415,6 +429,7 @@ export const RecipeData = [
     ],
     active: false,
     lillyRating: 'Lilly_Good',
+    week: 2,
   },
   {
     recipeTitle: 'Sausage and Peppers',
@@ -433,6 +448,8 @@ export const RecipeData = [
       'Eat and enjoy!',
     ],
     active: false,
+    lillyRating: 1,
+    week: 2,
   },
   {
     recipeTitle: 'Beef Stroganoff',
@@ -459,6 +476,7 @@ export const RecipeData = [
       'Eat and enjoy!',
     ],
     active: false,
+    week: 2,
   },
   {
     recipeTitle: 'Breakfast For Diner',
@@ -470,6 +488,7 @@ export const RecipeData = [
     instructions: ['?'],
     active: false,
     lillyRating: 'Lilly_Okay',
+    week: 2,
   },
   {
     recipeTitle: 'Lasagna',
@@ -479,6 +498,7 @@ export const RecipeData = [
     requiredInstruments: ['Crockpot'],
     instructions: ['?'],
     active: false,
+    week: 3,
   },
   {
     recipeTitle: 'Roasted Chicken and Mashpotatoes',
@@ -498,6 +518,7 @@ export const RecipeData = [
         'Make gravy per packet about 5 minutes until chicken is cooked.'
     ],
     active: false,
+    week: 3,
   },
   {
     recipeTitle: 'Chef Salad',
@@ -520,7 +541,8 @@ export const RecipeData = [
 
     ],
     active: false,
-    lillyRating: 'Lilly_Bad',
+    lillyRating: 1,
+    week: 4,
   },
   {
     recipeTitle: 'Italian Chicken',
@@ -530,6 +552,73 @@ export const RecipeData = [
     requiredInstruments: [''],
     instructions: ['?'],
     active: false,
+    week: 4,
+  },
+  {
+    recipeTitle: 'Kabobbs',
+    ingredients: [{ type: '?', amount: '?' }],
+    preparationTime: 0,
+    preparationMeasurement: 'hours',
+    requiredInstruments: ['Crockpot'],
+    instructions: ['?'],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  },
+  {
+    recipeTitle: 'Tikka Masala',
+    ingredients: [{ type: '?', amount: '?' }],
+    preparationTime: 0,
+    preparationMeasurement: 'hours',
+    requiredInstruments: ['Crockpot'],
+    instructions: ['?'],
+    active: false,
+    lillyRating: 1,
+    week: 1,
+  },
+  {
+    recipeTitle: 'Spaghetti and Meatballs',
+    ingredients: [{ type: '?', amount: '?' }],
+    preparationTime: 0,
+    preparationMeasurement: 'hours',
+    requiredInstruments: [],
+    instructions: ['?'],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  },
+  {
+    recipeTitle: 'Beyond Burgers',
+    ingredients: [{ type: '?', amount: '?' }],
+    preparationTime: 0,
+    preparationMeasurement: 'hours',
+    requiredInstruments: ['Crockpot'],
+    instructions: ['?'],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  },
+  {
+    recipeTitle: 'Beef Stew',
+    ingredients: [{ type: '?', amount: '?' }],
+    preparationTime: 8,
+    preparationMeasurement: 'hours',
+    requiredInstruments: ['Crockpot'],
+    instructions: ['?'],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  },
+  {
+    recipeTitle: 'Chicken Cordon Bleu',
+    ingredients: [{ type: '?', amount: '?' }],
+    preparationTime: 0,
+    preparationMeasurement: 'hours',
+    requiredInstruments: [],
+    instructions: ['?'],
+    active: false,
+    lillyRating: 3,
+    week: 3,
   },
   {
     recipeTitle: 'Template',
@@ -539,15 +628,8 @@ export const RecipeData = [
     requiredInstruments: ['Crockpot'],
     instructions: ['?'],
     active: false,
-  },
-  {
-    recipeTitle: 'Template',
-    ingredients: [{ type: '?', amount: '?' }],
-    preparationTime: 0,
-    preparationMeasurement: 'hours',
-    requiredInstruments: ['Crockpot'],
-    instructions: ['?'],
-    active: false,
+    lillyRating: 3,
+    week: 1,
   },
 ];
 
