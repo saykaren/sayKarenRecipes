@@ -50,7 +50,7 @@ const Navigation = ({
               className="RecipeFilterClass"
             >
               {RecipeData &&
-                RecipeData.map((recipe, indexRecipe) => (
+                RecipeData.sort((a,b)=> a.recipeTitle.localeCompare(b.recipeTitle)).map((recipe, indexRecipe) => (
                   <option value={recipe.recipeTitle}>
                     {recipe.recipeTitle}
                   </option>

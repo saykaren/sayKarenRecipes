@@ -17,8 +17,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [loading, setLoading] = useState(false);
   const [filtered, setFiltered] = useState('');
 
-  console.log(data.length);
-
   useEffect(() => {
     setLoading(false);
   });
@@ -60,7 +58,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
       {loading && <h2>LOADING</h2>}
       <div className="RecipeSection">
         {data &&
-          data.map((num, index) => (
+          data.sort((a,b)=> a.recipeTitle.localeCompare(b.recipeTitle)).map((num, index) => (
             <div className="recipeCard">
               {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
               <button onClick={() => updateState(index)}>Toggle</button>
