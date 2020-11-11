@@ -3,16 +3,21 @@ import RecipeData from '../data/data';
 import RecipeDataInterface from '../Interface/RecipeDataInterface';
 import Lilly_Good from '../assests/Lilly_Good.jpg';
 import Lilly_Bad from '../assests/Lilly_Bad.jpg';
+import Navigation from './Navigation';
 
 interface RecipeSectionProps {
-  data?: Array<RecipeDataInterface>;
+  // data: Array<RecipeDataInterface>;
   ratingShow: boolean;
+  setRatingShow: (arg1: boolean) => void;
+  // setData: (arg1:  Array<RecipeDataInterface>) => void;
 }
 
-const RecipeSection = ({ ratingShow }: RecipeSectionProps) => {
+const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [data, setData] = useState(RecipeData);
   const [loading, setLoading] = useState(false);
   const [filtered, setFiltered] = useState('');
+
+  console.log(data.length);
 
   useEffect(() => {
     setLoading(false);
@@ -29,29 +34,31 @@ const RecipeSection = ({ ratingShow }: RecipeSectionProps) => {
     setLoading(true);
   };
 
-  const handleChange = (e: string)=>{
-    setFiltered(e);
-  }
+  const clearFilter = () => {
+    setData(RecipeData);
+  };
+  const filterData = (title: string) => {
+    const newFiltered = RecipeData.filter(
+      (titleName) => titleName.recipeTitle === title,
+    );
+    setData(newFiltered);
+  };
 
   return (
     <>
+      <header className="App-header">
+        <Navigation
+          ratingShow={ratingShow}
+          setRatingShow={setRatingShow}
+          data={data}
+          filtered={filtered}
+          setFiltered={setFiltered}
+          filterData={filterData}
+          clearFilter={clearFilter}
+        />
+      </header>
       {loading && <h2>LOADING</h2>}
-
-      <label >Filter by Recipe</label>
-      {/*<select value={'false'} onChange={()=>console.log()} name='RecipeFilter'>*/}
-      {/*  <option value='false' selected>SELECT One</option>*/}
-      {/*  {data && data.map((recipe, index)=>(*/}
-      {/*      <option value={recipe.recipeTitle}>{recipe.recipeTitle}</option>*/}
-      {/*  )        )}*/}
-
-      {/*</select>*/}
-      <select id="RecipeFilter" value={filtered} onChange={(e)=>handleChange(e.currentTarget.value)} className="RecipeFilterClass">
-        {data && data.map((recipe, indexRecipe)=>(
-            <option value={recipe.recipeTitle}>{recipe.recipeTitle}</option>
-        ))}
-      </select>
-      Filtered{filtered}
-                 <div className="RecipeSection">
+      <div className="RecipeSection">
         {data &&
           data.map((num, index) => (
             <div className="recipeCard">

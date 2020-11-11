@@ -91,7 +91,7 @@ export const RecipeData = [
       'Scoop out and add lime juice and cilantro to each bowl.',
     ],
     active: false,
-    lillyRating: 3,
+    lillyRating: 2,
     week: 2,
   },
   {
@@ -151,6 +151,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 2,
+    lillyRating:2,
   },
   {
     recipeTitle: "Grandpa Garcia's Red Chile With Chicken",
@@ -180,6 +181,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 3,
+    lillyRating: 1,
   },
   {
     recipeTitle: 'Chicken Bacon Ranch Wraps',
@@ -212,6 +214,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 4,
+    lillyRating:3,
   },
   {
     recipeTitle: 'Creamy Chicken Spaghetti',
@@ -237,6 +240,7 @@ export const RecipeData = [
       'Stir in the sour cream and let sit for 5 minutes before serving',
           ],
     active: false,
+    lillyRating: 3,
   },
   {
     recipeTitle: 'Teriyaki Chicken',
@@ -265,6 +269,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 4,
+    lillyRating: 2,
   },
   {
     recipeTitle: 'Chipotle Chicken Pasta',
@@ -291,6 +296,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 4,
+    lillyRating: 1,
   },
   {
     recipeTitle: 'Grandpa Garcia\'s Green Chile',
@@ -324,6 +330,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 3,
+    lillyRating: 1,
   },
   {
     recipeTitle: 'Grandpa Saylor\'s Famous Chili Recipe',
@@ -354,6 +361,7 @@ export const RecipeData = [
       'Karen Hack: Cut ingredients in half and throw into crockpot for 8 hours',
     ],
     active: false,
+    lillyRating: 2,
     week: 4,
   },
   {
@@ -386,6 +394,7 @@ export const RecipeData = [
       'Mix all together and ENJOY!',
     ],
     active: false,
+    lillyRating: 3,
     week: 3,
   },
   {
@@ -406,6 +415,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 2,
+    lillyRating: 3,
   },
   {
     recipeTitle: 'Tacos',
@@ -428,7 +438,7 @@ export const RecipeData = [
       'Add toppings. Eat and enjoy',
     ],
     active: false,
-    lillyRating: 'Lilly_Good',
+    lillyRating: 3,
     week: 2,
   },
   {
@@ -477,6 +487,7 @@ export const RecipeData = [
     ],
     active: false,
     week: 2,
+    lillyRating: 3,
   },
   {
     recipeTitle: 'Breakfast For Diner',
@@ -487,8 +498,8 @@ export const RecipeData = [
     requiredInstruments: ['Crockpot'],
     instructions: ['?'],
     active: false,
-    lillyRating: 'Lilly_Okay',
-    week: 2,
+      week: 2,
+    lillyRating: 3,
   },
   {
     recipeTitle: 'Lasagna',
@@ -499,6 +510,7 @@ export const RecipeData = [
     instructions: ['?'],
     active: false,
     week: 3,
+    lillyRating: 1,
   },
   {
     recipeTitle: 'Roasted Chicken and Mashpotatoes',
@@ -518,6 +530,7 @@ export const RecipeData = [
         'Make gravy per packet about 5 minutes until chicken is cooked.'
     ],
     active: false,
+    lillyRating: 2,
     week: 3,
   },
   {
@@ -552,6 +565,7 @@ export const RecipeData = [
     requiredInstruments: [''],
     instructions: ['?'],
     active: false,
+    lillyRating: 2,
     week: 4,
   },
   {
