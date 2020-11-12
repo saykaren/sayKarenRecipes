@@ -42,6 +42,15 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     setData(newFiltered);
   };
 
+  const filterBoolean = (weekNumber: number) => {
+    if (weekNumber > 0) {
+      const newFiltered = RecipeData.filter(
+        (sectionName) => sectionName.week === weekNumber,
+      );
+      setData(newFiltered);
+    }
+  };
+
   return (
     <>
       <header className="App-header">
@@ -53,53 +62,59 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
           setFiltered={setFiltered}
           filterData={filterData}
           clearFilter={clearFilter}
+          filterBoolean={filterBoolean}
         />
       </header>
       {loading && <h2>LOADING</h2>}
       <div className="RecipeSection">
         {data &&
-          data.sort((a,b)=> a.recipeTitle.localeCompare(b.recipeTitle)).map((num, index) => (
-            <div className="recipeCard">
-              {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
-              <button onClick={() => updateState(index)}>Toggle</button>
-              {num.active && (
-                <>
-                  <div className={`ingredients ${index}`}>
-                    {ratingShow && num.lillyRating && (
-                      <img
-                        className="LillyRating"
-                        src={num.lillyRating == 1 ? Lilly_Bad : Lilly_Good}
-                        alt="rating"
-                      />
-                    )}
+          data
+            .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
+            .map((num, index) => (
+              <div className="recipeCard">
+                {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
+                <button onClick={() => updateState(index)}>Toggle</button>
+                {num.active && (
+                  <>
+                    <div className={`ingredients ${index}`}>
+                      {ratingShow && num.lillyRating && (
+                        <img
+                          className="LillyRating"
+                          src={num.lillyRating == 1 ? Lilly_Bad : Lilly_Good}
+                          alt="rating"
+                        />
+                      )}
 
-                    <h3>Ingredients</h3>
-                    {num.ingredients.map((ingred, indexIngred) => (
-                      <div>
-                        &#9832;{ingred.type} <b>:</b> {ingred.amount}
-                      </div>
-                    ))}
-                  </div>
-                  <div className={`instructions ${index}`}>
-                    <h3>Instructions</h3>
-                    {num.instructions.map((instr, indexInstru) => (
-                      <div>
-                        <b>{indexInstru + 1}.</b> {instr}
-                        <br />
-                        <br />
-                      </div>
-                    ))}
-                  </div>
-                </>
-              )}
+                      <h3>Ingredients</h3>
+                      {num.ingredients.map((ingred, indexIngred) => (
+                        <div>
+                          &#9832;{ingred.type} <b>:</b> {ingred.amount}
+                        </div>
+                      ))}
+                    </div>
+                    <div className={`instructions ${index}`}>
+                      <h3>Instructions</h3>
+                      {num.instructions.map((instr, indexInstru) => (
+                        <div>
+                          <b>{indexInstru + 1}.</b> {instr}
+                          <br />
+                          <br />
+                        </div>
+                      ))}
+                    </div>
+                  </>
+                )}
 
-              {num.active && (
-                <div className="closeButton" onClick={() => updateState(index)}>
-                  &#8682;
-                </div>
-              )}
-            </div>
-          ))}
+                {num.active && (
+                  <div
+                    className="closeButton"
+                    onClick={() => updateState(index)}
+                  >
+                    &#8682;
+                  </div>
+                )}
+              </div>
+            ))}
       </div>
     </>
   );

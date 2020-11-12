@@ -577,7 +577,6 @@ export const RecipeData = [
       { type: 'Bacon', amount: '1-2' },
       { type: 'Bleu Cheese', amount: '1' },
       { type: 'Dressing', amount: '1' },
-      { type: '?', amount: '?' },
     ],
     preparationTime: 15,
     preparationMeasurement: 'minutes',

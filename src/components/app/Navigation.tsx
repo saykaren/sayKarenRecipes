@@ -11,6 +11,7 @@ interface NavigationProps {
   data: Array<RecipeDataInterface>;
   filterData: (arg1: string) => void;
   clearFilter: () => void;
+  filterBoolean: (arg1: number) => void;
 }
 
 const Navigation = ({
@@ -21,6 +22,7 @@ const Navigation = ({
   data,
   filterData,
   clearFilter,
+  filterBoolean,
 }: NavigationProps) => {
   const [nav, setNav] = useState(false);
 
@@ -39,23 +41,44 @@ const Navigation = ({
         <div onClick={() => toggle()}>{nav ? <>&#10005;</> : <>&#9776;</>}</div>
         {nav && (
           <>
-            <div onClick={() => setRatingShow(!ratingShow)}>
+            <div onClick={() => setRatingShow(!ratingShow)} className="navItem">
               Toggle Rating Image
             </div>
-            <label>Filter by Recipe</label>
-            <select
-              id="RecipeFilter"
-              value={filtered}
-              onChange={(e) => handleChange(e.currentTarget.value)}
-              className="RecipeFilterClass"
-            >
-              {RecipeData &&
-                RecipeData.sort((a,b)=> a.recipeTitle.localeCompare(b.recipeTitle)).map((recipe, indexRecipe) => (
-                  <option value={recipe.recipeTitle}>
-                    {recipe.recipeTitle}
-                  </option>
-                ))}
-            </select>
+            <div className="navItem">
+              <label>Filter by Recipe</label>
+              <select
+                id="RecipeFilter"
+                value={filtered}
+                onChange={(e) => handleChange(e.currentTarget.value)}
+                className="RecipeFilterClass"
+              >
+                {RecipeData &&
+                  RecipeData.sort((a, b) =>
+                    a.recipeTitle.localeCompare(b.recipeTitle),
+                  ).map((recipe, indexRecipe) => (
+                    <option value={recipe.recipeTitle}>
+                      {recipe.recipeTitle}
+                    </option>
+                  ))}
+              </select>
+            </div>
+            <div className="navItem">
+              <label>Filter by Week </label>
+              <select
+                id="WeekFilter"
+                value={filtered}
+                onChange={(e) =>
+                  filterBoolean(parseInt(e.currentTarget.value, 10))
+                }
+                className="RecipeFilterClass"
+              >
+                <option value={0}>Select One</option>
+                <option value={1}>1</option>
+                <option value={2}>2</option>
+                <option value={3}>3</option>
+                <option value={4}>4</option>
+              </select>
+            </div>
             <button onClick={() => clearFilter()}>Clear Filter</button>
           </>
         )}
