@@ -101,7 +101,7 @@ const Navigation = ({
       <h2>
         {' '}
         <img src={sayKarenLogo} id="sayKaren" alt="sayKaren" />
-        's Recipes Box
+        's Recipe Box
       </h2>
     </>
   );

@@ -8,6 +8,7 @@
 
 html {
   background-color: $primary-color;
+  font-family: $font-family;
 }
 
 .App-logo {
@@ -45,6 +46,7 @@ button {
   color: $primary-color;
   background-color: $secondary-color;
   border: 1px solid $secondary-color;
+  font-family: $font-family;
 }
 
 @keyframes App-logo-spin {
@@ -65,6 +67,7 @@ button {
   position: fixed;
   z-index: 1;
   font-size: 1em;
+  font-family: $font-family;
 }
 
 #navigationActive {
@@ -78,7 +81,9 @@ button {
   position: fixed;
   margin: 10px;
   padding: 10px;
-  font-size: 1em;
+  font-size: 15px;
+  font-family: $font-family;
+  max-width: 70vw;
 }
 
 .navItem {
