@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import RecipeData from '../data/data';
 import RecipeDataInterface from '../Interface/RecipeDataInterface';
 import Lilly_Good from '../assests/Lilly_Good.jpg';
@@ -16,6 +16,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [data, setData] = useState(RecipeData);
   const [loading, setLoading] = useState(false);
   const [filtered, setFiltered] = useState('');
+  const [activeAllStatus, setActiveAllStatus] = useState(false);
 
   useEffect(() => {
     setLoading(false);
@@ -25,16 +26,26 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     toggle(indexNumber);
   };
   const toggle = (indexNumber: number) => {
+    setLoading(true);
     const activity = data[indexNumber].active;
     const newData = data;
     newData[indexNumber].active = !activity;
     setData(newData);
-    setLoading(true);
   };
 
   const clearFilter = () => {
+    setLoading(true);
     setData(RecipeData);
   };
+
+  const updateActive = (change: boolean) => {
+    setLoading(true);
+    const newData = RecipeData;
+    newData.map((data) => (data.active = change));
+    setData(newData);
+     setActiveAllStatus(change);
+  };
+
   const filterData = (title: string) => {
     const newFiltered = RecipeData.filter(
       (titleName) => titleName.recipeTitle === title,
@@ -49,6 +60,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
       );
       setData(newFiltered);
     }
+
   };
 
   return (
@@ -63,6 +75,8 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
           filterData={filterData}
           clearFilter={clearFilter}
           filterBoolean={filterBoolean}
+          updateActive={updateActive}
+          activeAllStatus={activeAllStatus}
         />
       </header>
       {loading && <h2>LOADING</h2>}
@@ -80,7 +94,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                       {ratingShow && num.lillyRating && (
                         <img
                           className="LillyRating"
-                          src={num.lillyRating == 1 ? Lilly_Bad : Lilly_Good}
+                          src={num.lillyRating === 1 ? Lilly_Bad : Lilly_Good}
                           alt="rating"
                         />
                       )}
