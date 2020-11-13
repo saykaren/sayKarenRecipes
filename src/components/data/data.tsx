@@ -490,7 +490,7 @@ export const RecipeData = [
     lillyRating: 3,
   },
   {
-    recipeTitle: 'Breakfast For Diner',
+    recipeTitle: 'Breakfast For Dinner',
     ingredients: [
         { type: 'Potatoes', amount: '4-5' },
       { type: 'Bacon', amount: '2/person' },
