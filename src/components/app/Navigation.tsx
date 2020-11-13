@@ -12,6 +12,8 @@ interface NavigationProps {
   filterData: (arg1: string) => void;
   clearFilter: () => void;
   filterBoolean: (arg1: number) => void;
+  updateActive: (arg1: boolean) => void;
+  activeAllStatus: boolean;
 }
 
 const Navigation = ({
@@ -23,6 +25,8 @@ const Navigation = ({
   filterData,
   clearFilter,
   filterBoolean,
+  updateActive,
+  activeAllStatus,
 }: NavigationProps) => {
   const [nav, setNav] = useState(false);
 
@@ -79,7 +83,17 @@ const Navigation = ({
                 <option value={4}>4</option>
               </select>
             </div>
+
             <button onClick={() => clearFilter()}>Clear Filter</button>
+            {activeAllStatus ? (
+              <button onClick={() => updateActive(false)}>
+                Close All
+              </button>
+            ) : (
+              <button onClick={() => updateActive(true)}>
+                Open All
+              </button>
+            )}
           </>
         )}
       </div>
