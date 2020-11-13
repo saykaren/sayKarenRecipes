@@ -3,6 +3,7 @@ import RecipeData from '../data/data';
 import RecipeDataInterface from '../Interface/RecipeDataInterface';
 import Lilly_Good from '../assests/Lilly_Good.jpg';
 import Lilly_Bad from '../assests/Lilly_Bad.jpg';
+import Lilly_Okay from '../assests/Lilly_Okay.jpg';
 import Navigation from './Navigation';
 
 interface RecipeSectionProps {
@@ -93,7 +94,13 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                       {ratingShow && num.lillyRating && (
                         <img
                           className="LillyRating"
-                          src={num.lillyRating === 1 ? Lilly_Bad : Lilly_Good}
+                          src={
+                            num.lillyRating === 1
+                              ? Lilly_Bad
+                              : num.lillyRating === 3
+                              ? Lilly_Good
+                              : Lilly_Okay
+                          }
                           alt="rating"
                         />
                       )}
