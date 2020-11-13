@@ -99,9 +99,9 @@ const Navigation = ({
         )}
       </div>
       <h2>
-        {' '}
+
         <img src={sayKarenLogo} id="sayKaren" alt="sayKaren" />
-        's Recipe Box
+        <span id='appTitle'>'s Recipe Box</span>
       </h2>
     </>
   );
