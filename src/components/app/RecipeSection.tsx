@@ -43,7 +43,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     const newData = RecipeData;
     newData.map((data) => (data.active = change));
     setData(newData);
-     setActiveAllStatus(change);
+    setActiveAllStatus(change);
   };
 
   const filterData = (title: string) => {
@@ -60,7 +60,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
       );
       setData(newFiltered);
     }
-
   };
 
   return (
@@ -116,6 +115,23 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                         </div>
                       ))}
                     </div>
+                    <div className="ingredients">
+                      <b>Time:</b> {num.preparationTime}{' '}
+                      {num.preparationMeasurement}
+                    </div>
+                    {num.requiredInstruments.length > 0 && (
+                      <div className="ingredients">
+                        <b>Required Supplies: </b>{' '}
+                        {num.requiredInstruments.map((inst, indexInstru) => (
+                          <div>{inst}</div>
+                        ))}
+                      </div>
+                    )}
+                    {num.week && (
+                      <div className="ingredients">
+                        <b>Week:</b> {num.week}
+                      </div>
+                    )}
                   </>
                 )}
 
