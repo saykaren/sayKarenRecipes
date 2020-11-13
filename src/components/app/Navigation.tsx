@@ -45,9 +45,6 @@ const Navigation = ({
         <div onClick={() => toggle()}>{nav ? <>&#10005;</> : <>&#9776;</>}</div>
         {nav && (
           <>
-            <div onClick={() => setRatingShow(!ratingShow)} className="navItem">
-              Toggle Rating Image
-            </div>
             <div className="navItem">
               <label>Filter by Recipe</label>
               <select
@@ -86,13 +83,17 @@ const Navigation = ({
 
             <button onClick={() => clearFilter()}>Clear Filter</button>
             {activeAllStatus ? (
-              <button onClick={() => updateActive(false)}>
-                Close All
-              </button>
+              <>
+                <button onClick={() => updateActive(false)}>Close All</button>
+                <button
+                  onClick={() => setRatingShow(!ratingShow)}
+                  className="navItem"
+                >
+                  {ratingShow ? 'Hide' : 'Show'} Lilly Rating
+                </button>
+              </>
             ) : (
-              <button onClick={() => updateActive(true)}>
-                Open All
-              </button>
+              <button onClick={() => updateActive(true)}>Open All</button>
             )}
           </>
         )}
