@@ -1,5 +1,5 @@
 import React from 'react';
-import sayKarenLogo from '../assests/sayKaren_logo.png';
+import sayKarenLogo from '../assests/sayKaren_logo-white_8.1.2019.png';
 
 const Footer= ()=> (
     <footer
