@@ -712,7 +712,7 @@ export const RecipeData = [
       'Make muffin mix 30 minutes before you are ready to eat',
     ],
     active: false,
-    lillyRating: 3,
+    lillyRating: 2,
     week: 1,
   },
   {
