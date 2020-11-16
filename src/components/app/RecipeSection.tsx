@@ -1,10 +1,10 @@
-import React, { useState, useEffect, useLayoutEffect } from 'react';
-import RecipeData from '../data/data';
-import RecipeDataInterface from '../Interface/RecipeDataInterface';
-import Lilly_Good from '../assests/Lilly_Good.jpg';
-import Lilly_Bad from '../assests/Lilly_Bad.jpg';
-import Lilly_Okay from '../assests/Lilly_Okay.jpg';
-import Navigation from './Navigation';
+import React, { useState, useEffect } from "react";
+import RecipeData from "../data/data";
+// import RecipeDataInterface from '../Interface/RecipeDataInterface';
+import Lilly_Good from "../assests/Lilly_Good.jpg";
+import Lilly_Bad from "../assests/Lilly_Bad.jpg";
+import Lilly_Okay from "../assests/Lilly_Okay.jpg";
+import Navigation from "./Navigation";
 
 interface RecipeSectionProps {
   // data: Array<RecipeDataInterface>;
@@ -16,12 +16,12 @@ interface RecipeSectionProps {
 const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [data, setData] = useState(RecipeData);
   const [loading, setLoading] = useState(false);
-  const [filtered, setFiltered] = useState('');
+  const [filtered, setFiltered] = useState("");
   const [activeAllStatus, setActiveAllStatus] = useState(false);
 
   useEffect(() => {
     setLoading(false);
-  });
+  },);
 
   const updateState = (indexNumber: number) => {
     toggle(indexNumber);
@@ -49,15 +49,16 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
 
   const filterData = (title: string) => {
     const newFiltered = RecipeData.filter(
-      (titleName) => titleName.recipeTitle === title,
+      (titleName) => titleName.recipeTitle === title
     );
+    newFiltered[0].active = true;
     setData(newFiltered);
   };
 
   const filterBoolean = (weekNumber: number) => {
     if (weekNumber > 0) {
       const newFiltered = RecipeData.filter(
-        (sectionName) => sectionName.week === weekNumber,
+        (sectionName) => sectionName.week === weekNumber
       );
       setData(newFiltered);
     }
@@ -85,7 +86,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
           data
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
-              <div className="recipeCard">
+              <div className="recipeCard" key={`recipeCard${index}`}>
                 {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
                 <button onClick={() => updateState(index)}>Toggle</button>
                 {num.active && (
@@ -123,14 +124,14 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                       ))}
                     </div>
                     <div className="ingredients">
-                      <b>Time:</b> {num.preparationTime}{' '}
+                      <b>Time:</b> {num.preparationTime}{" "}
                       {num.preparationMeasurement}
                     </div>
                     {num.requiredInstruments.length > 0 && (
                       <div className="ingredients">
-                        <b>Required Supplies: </b>{' '}
+                        <b>Required Supplies: </b>{" "}
                         {num.requiredInstruments.map((inst, indexInstru) => (
-                          <div>{inst}</div>
+                          <div key={indexInstru}>{inst}</div>
                         ))}
                       </div>
                     )}
