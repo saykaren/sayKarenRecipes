@@ -58,7 +58,7 @@ const Navigation = ({
                   RecipeData.sort((a, b) =>
                     a.recipeTitle.localeCompare(b.recipeTitle),
                   ).map((recipe, indexRecipe) => (
-                    <option value={recipe.recipeTitle}>
+                    <option value={recipe.recipeTitle} key={indexRecipe}>
                       {recipe.recipeTitle}
                     </option>
                   ))}
