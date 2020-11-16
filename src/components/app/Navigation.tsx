@@ -33,6 +33,7 @@ const Navigation = ({
   const handleChange = (e: string) => {
     setFiltered(e);
     filterData(e);
+    setNav(false);
   };
 
   const toggle = () => {
