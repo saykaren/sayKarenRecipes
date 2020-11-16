@@ -108,7 +108,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
 
                       <h3>Ingredients</h3>
                       {num.ingredients.map((ingred, indexIngred) => (
-                        <div>
+                        <div key={indexIngred}>
                           &#9832;{ingred.type} <b>:</b> {ingred.amount}
                         </div>
                       ))}
