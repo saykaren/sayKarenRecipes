@@ -595,6 +595,7 @@ export const RecipeData = [
     ingredients: [
         { type: 'Chicken', amount: '1-2' },
       { type: 'Zesty Italian Dressing', amount: '1' },
+      { type: 'Cream of Chicken Soup', amount: '2' },
       { type: 'Cream Cheese', amount: '8oz' },
       { type: 'Mozzarella-Shredded', amount: '1/2 cup' },
       { type: 'Egg Noodles', amount: '1/2 bag' },
@@ -602,7 +603,7 @@ export const RecipeData = [
     preparationTime: 8,
     preparationMeasurement: 'hours',
     requiredInstruments: ['Crock-Pot'],
-    instructions: ['Place all but noodles and cheese in Crock-Pot and cook on low for 6-8 hours or high for 4-6',
+    instructions: ['Place all but noodles and Mozzarella in Crock-Pot and cook on low for 6-8 hours or high for 4-6',
       '30 minutes before eating boil water and cook noodles',
       'Mix noodles into Crock-Pot. Serve with mozzarella cheese as desired and enjoy!',
     ],
