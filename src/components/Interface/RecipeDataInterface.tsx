@@ -12,6 +12,7 @@ export interface RecipeDataInterface {
   active: boolean;
   lillyRating?: number;
   week?: number;
+  groceryList?: boolean,
 }
 
 export default RecipeDataInterface;
