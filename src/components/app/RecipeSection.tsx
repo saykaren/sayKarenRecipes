@@ -5,6 +5,7 @@ import Lilly_Good from "../assests/Lilly_Good.jpg";
 import Lilly_Bad from "../assests/Lilly_Bad.jpg";
 import Lilly_Okay from "../assests/Lilly_Okay.jpg";
 import Navigation from "./Navigation";
+import Groceries from './Groceries';
 
 interface RecipeSectionProps {
   // data: Array<RecipeDataInterface>;
@@ -18,6 +19,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [loading, setLoading] = useState(false);
   const [filtered, setFiltered] = useState("");
   const [activeAllStatus, setActiveAllStatus] = useState(false);
+  const [grocery, setGrocery] = useState(false);
 
   useEffect(() => {
     setLoading(false);
@@ -33,6 +35,14 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     newData[indexNumber].active = !activity;
     setData(newData);
   };
+
+  const updateGrocery = (indexNumber: number) => {
+    setLoading(true);
+    const activity = data[indexNumber].groceryList;
+    const newData = data;
+    newData[indexNumber].groceryList = !activity;
+    setData(newData);
+  }
 
   const clearFilter = () => {
     setLoading(true);
@@ -87,6 +97,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard" key={`recipeCard${index}`}>
+                
                 {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
                 <button onClick={() => updateState(index)}>Toggle</button>
                 {num.active && (
@@ -142,7 +153,8 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                     )}
                   </>
                 )}
-
+                {num.groceryList ? <div
+                onClick={()=>updateGrocery(index)} >Added</div> : <div onClick={()=>updateGrocery(index)}>ADD: Grocery List</div>}
                 {num.active && (
                   <div
                     className="closeButton"
@@ -154,6 +166,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
               </div>
             ))}
       </div>
+      <Groceries />
     </>
   );
 };

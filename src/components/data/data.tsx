@@ -28,6 +28,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 2,
     week: 3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chicken Enchilada Soup',
@@ -60,6 +61,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 1,
     week: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'White Chicken Chili',
@@ -93,6 +95,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 2,
     week: 2,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chicken Pesto',
@@ -121,6 +124,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 1,
+    groceryList: false,
   },
 
   {
@@ -152,6 +156,7 @@ export const RecipeData = [
     active: false,
     week: 2,
     lillyRating:2,
+    groceryList: false,
   },
   {
     recipeTitle: "Grandpa Garcia's Red Chile With Chicken",
@@ -182,6 +187,7 @@ export const RecipeData = [
     active: false,
     week: 3,
     lillyRating: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chicken Bacon Ranch Wraps',
@@ -215,6 +221,7 @@ export const RecipeData = [
     active: false,
     week: 4,
     lillyRating:3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Creamy Chicken Spaghetti',
@@ -270,6 +277,7 @@ export const RecipeData = [
     active: false,
     week: 4,
     lillyRating: 2,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chipotle Chicken Pasta',
@@ -297,6 +305,7 @@ export const RecipeData = [
     active: false,
     week: 4,
     lillyRating: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Grandpa Garcia\'s Green Chile',
@@ -331,6 +340,7 @@ export const RecipeData = [
     active: false,
     week: 3,
     lillyRating: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Grandpa Saylor\'s Famous Chili Recipe',
@@ -363,6 +373,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 2,
     week: 4,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chicken Alfredo',
@@ -396,6 +407,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Gram\'s Sloppy Joes',
@@ -416,6 +428,7 @@ export const RecipeData = [
     active: false,
     week: 2,
     lillyRating: 3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Tacos',
@@ -440,6 +453,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 2,
+    groceryList: false,
   },
   {
     recipeTitle: 'Sausage and Peppers',
@@ -460,6 +474,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 1,
     week: 2,
+    groceryList: false,
   },
   {
     recipeTitle: 'Beef Stroganoff',
@@ -488,6 +503,7 @@ export const RecipeData = [
     active: false,
     week: 2,
     lillyRating: 3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Breakfast For Dinner',
@@ -514,6 +530,7 @@ export const RecipeData = [
     active: false,
       week: 2,
     lillyRating: 3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Lasagna',
@@ -545,6 +562,7 @@ export const RecipeData = [
     active: false,
     week: 3,
     lillyRating: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Roasted Chicken and Mashpotatoes',
@@ -566,6 +584,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 2,
     week: 3,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chef Salad',
@@ -589,6 +608,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 1,
     week: 4,
+    groceryList: false,
   },
   {
     recipeTitle: 'Italian Chicken',
@@ -610,6 +630,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 2,
     week: 4,
+    groceryList: false,
   },
   {
     recipeTitle: 'Kabobs',
@@ -634,6 +655,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Tikka Masala',
@@ -656,6 +678,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 1,
     week: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Spaghetti and Meatballs',
@@ -673,6 +696,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Beyond Burgers',
@@ -693,6 +717,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Beef Stew',
@@ -715,6 +740,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 2,
     week: 1,
+    groceryList: false,
   },
   {
     recipeTitle: 'Chicken Cordon Bleu',
@@ -741,6 +767,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 3,
+    groceryList: false,
   },
   // {
   //   recipeTitle: 'Template',
@@ -752,6 +779,7 @@ export const RecipeData = [
   //   active: false,
   //   lillyRating: 3,
   //   week: 1,
+  // groceryList: false,
   // },
 ];
 
