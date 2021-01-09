@@ -18,14 +18,13 @@ const Groceries = ({}: GroceriesProp) => {
   const [grocery, setGrocery] = useState(false);
   // const [groceryList, setGroceryList] = useState(RecipeData);
 
-   
   // const setNew = data.map((x, index)=>{
   //   const newest = x.ingredients.sort((a,b)=> a.type.localeCompare(b.type));
   // });
   // data.map((x,index)=>{
   //   x.ingredients.sort((a,b)=> a.type.localeCompare(b.type));
   // });
-  
+
   // console.log(groceryList);
   //   const [loading, setLoading] = useState(false);
   //   const [filtered, setFiltered] = useState("");
@@ -92,20 +91,16 @@ const Groceries = ({}: GroceriesProp) => {
         <div key={index}>
           {dataItem.groceryList && (
             <div className="groceryTableContainer">
-              <div className="rowGrocery">
-                <span className="columnOne grocery">Ingredient</span>
-                <span className="columnTwo grocery"> Amount</span>
-                <span className="columnThree grocery">Recipe</span>
-              </div>
-              {dataItem.ingredients.sort((a,b)=>a.type.localeCompare(b.type)).map((ingred, ingredIndex) => (
-                <div key={ingredIndex} className="rowGrocery">
-                  <span className="columnOne grocery">{ingred.type}</span>
-                  <span className="columnTwo grocery"> {ingred.amount}</span>
-                  <span className="columnThree grocery">
-                    {dataItem.recipeTitle}
+              {dataItem.ingredients
+                .sort((a, b) => a.type.localeCompare(b.type))
+                .map((ingred, ingredIndex) => (
+                  <span
+                    key={ingredIndex}
+                    className="rowGrocery grocery columnOne"
+                  >
+                    {ingred.type} {ingred.amount}
                   </span>
-                </div>
-              ))}
+                ))}
             </div>
           )}
         </div>
