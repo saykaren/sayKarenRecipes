@@ -89,21 +89,16 @@ const Groceries = ({}: GroceriesProp) => {
     <div className="GroceriesSection">
       <h2>Groceries</h2>
       {data.map((dataItem, index) => (
-        <div key={index}>
+        <div key={index} >
           {dataItem.groceryList && (
-            <div className="groceryTableContainer">
-              <div className="rowGrocery">
-                <span className="columnOne grocery">Ingredient</span>
-                <span className="columnTwo grocery"> Amount</span>
-                <span className="columnThree grocery">Recipe</span>
-              </div>
-              {dataItem.ingredients.sort((a,b)=>a.type.localeCompare(b.type)).map((ingred, ingredIndex) => (
+            <div  className="groceryTableContainer">
+                  {dataItem.ingredients.sort((a,b)=>a.type.localeCompare(b.type)).map((ingred, ingredIndex) => (
                 <div key={ingredIndex} className="rowGrocery">
-                  <span className="columnOne grocery">{ingred.type}</span>
-                  <span className="columnTwo grocery"> {ingred.amount}</span>
+                  <span className="columnOne grocery">{ingred.type} {ingred.amount}</span>
+                  {/* <span className="columnTwo grocery"> {ingred.amount}</span>
                   <span className="columnThree grocery">
                     {dataItem.recipeTitle}
-                  </span>
+                  </span> */}
                 </div>
               ))}
             </div>
