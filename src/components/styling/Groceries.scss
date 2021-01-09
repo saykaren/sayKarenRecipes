@@ -3,3 +3,23 @@
 .GroceriesSection {
     background-color: white;
 }
+
+.grocery {
+    border: 1px solid $secondary-color;
+    background-color: $primary-color;
+    color: $light-color;
+    padding: 10px;
+    width: 30%;
+    text-align: left;
+    
+}
+
+.rowGrocery {
+    display: flex;
+    justify-content: space-between;
+}
+
+.groceryTableContainer {
+    max-width: 500px;
+    padding: 10px;
+}
