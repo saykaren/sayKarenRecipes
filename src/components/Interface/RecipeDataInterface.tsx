@@ -1,6 +1,7 @@
 export interface IngredientInterface {
   type: string;
   amount: string;
+  section: string;
 }
 export interface RecipeDataInterface {
   recipeTitle: string;

@@ -19,7 +19,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [loading, setLoading] = useState(false);
   const [filtered, setFiltered] = useState("");
   const [activeAllStatus, setActiveAllStatus] = useState(false);
-  const [activeIngredients, setActiveIngredients] = useState([]);
+  // const [activeIngredients, setActiveIngredients] = useState([]);
   // const [grocery, setGrocery] = useState(false);
 
   useEffect(() => {
@@ -41,15 +41,8 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     setLoading(true);
     const activity = data[indexNumber].groceryList;
     const newData = data;
-    newData[indexNumber].groceryList = !activity;
-    
-    var ingredientsNew = [ { type: 'Salsa', amount: '1' },];
-    var notIngredientsNew = Array;
-  
+    newData[indexNumber].groceryList = !activity;  
     setData(newData);
-
-//     const karenData = data.map(x=>( x.groceryList ? ingredientsNew.push(x.ingredients) : false));
-// console.log({karenData});
   }
 
   const clearFilter = () => {
