@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import RecipeData from "../data/data";
-// import RecipeDataInterface from '../Interface/RecipeDataInterface';
-// import Lilly_Good from "../assests/Lilly_Good.jpg";
-// import Lilly_Bad from "../assests/Lilly_Bad.jpg";
-// import Lilly_Okay from "../assests/Lilly_Okay.jpg";
-// import Navigation from "./Navigation";
+ import RecipeDataInterface from '../Interface/RecipeDataInterface';
+
 
 interface GroceriesProp {
-  // data: Array<RecipeDataInterface>;
+   //data: Array<RecipeDataInterface>;
   //   ratingShow: boolean;
   //   setRatingShow: (arg1: boolean) => void;
   // setData: (arg1:  Array<RecipeDataInterface>) => void;
@@ -15,7 +12,7 @@ interface GroceriesProp {
 
 const Groceries = ({}: GroceriesProp) => {
   const [data, setData] = useState(RecipeData);
-  const [grocery, setGrocery] = useState(false);
+
   // const [groceryList, setGroceryList] = useState(RecipeData);
 
   // const setNew = data.map((x, index)=>{
@@ -89,6 +86,7 @@ const Groceries = ({}: GroceriesProp) => {
       <h2>Groceries</h2>
       {data.map((dataItem, index) => (
         <div key={index}>
+    
           {dataItem.groceryList && (
             <div className="groceryTableContainer">
               {dataItem.ingredients
@@ -98,7 +96,7 @@ const Groceries = ({}: GroceriesProp) => {
                     key={ingredIndex}
                     className="rowGrocery grocery columnOne"
                   >
-                    {ingred.type} {ingred.amount}
+                    {ingred.type} {ingred.amount} 
                   </span>
                 ))}
             </div>
