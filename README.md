@@ -1,3 +1,20 @@
+# Live Site
+[sayKaren Recipe's Box](https://saykaren.github.io/sayKarenRecipes/)
+
+# Reason For App
+
+I created this app to help track the recipes of the main meals we make on a monthly basis and then also add on grocery list and other features as I go. 
+
+# Grocery Sections
+
+1 Produce
+2 Bread
+3 Non-perishables
+4 Meat 
+5 Personal Care
+6 Dairy  
+7 Frozen
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
