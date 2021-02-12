@@ -43,7 +43,7 @@ const Navigation = ({
   return (
     <>
       <div id={nav ? 'navigationActive' : 'navigation'}>
-        <div onClick={() => toggle()}>{nav ? <>&#10005;</> : <>&#9776;</>}</div>
+        <div onClick={() => toggle()}>{nav ? <span className="navX">&#10005;</span> : <span>&#9776;</span>}</div>
         {nav && (
           <>
             <div className="navItem">
