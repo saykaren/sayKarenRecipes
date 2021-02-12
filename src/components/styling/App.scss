@@ -34,6 +34,7 @@ html {
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+  margin-right: -20px;
 }
 
 .App-link {
@@ -43,8 +44,8 @@ html {
 button {
   border-radius: 4px;
   box-shadow: 1px 1px 1px $primary-color;
-  margin: 2px;
-  padding: 2px;
+  margin: 4px;
+  padding: 4px;
   color: $primary-color;
   background-color: $secondary-color;
   border: 1px solid $secondary-color;
@@ -63,5 +64,7 @@ button {
 
 
 #sayKaren {
-  height: 17vh;
+  height: 10vh;
+  padding-right: 20px;
+  padding-top: 20px;
 }
