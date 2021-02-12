@@ -32,3 +32,16 @@
   box-shadow: 3px 4px 10px black ;
   margin-left: 35%;
 }
+
+.FilterBuddy {
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: center;
+}
+
+.filterBuddydetail {
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 3px 4px 10px black ;
+}

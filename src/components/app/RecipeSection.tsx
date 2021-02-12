@@ -6,6 +6,7 @@ import Lilly_Bad from "../assests/Lilly_Bad.jpg";
 import Lilly_Okay from "../assests/Lilly_Okay.jpg";
 import Navigation from "./Navigation";
 import Groceries from './Groceries';
+import FilterBuddy from './FilterBuddy';
 
 interface RecipeSectionProps {
   // data: Array<RecipeDataInterface>;
@@ -19,9 +20,19 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [loading, setLoading] = useState(false);
   const [filtered, setFiltered] = useState("");
   const [activeAllStatus, setActiveAllStatus] = useState(false);
+
+  const [filterView, setFilterView] = useState(RecipeData);
+  const [serachTerm, setSearchTerm] = useState('');
   // const [activeIngredients, setActiveIngredients] = useState([]);
   // const [grocery, setGrocery] = useState(false);
 
+  const editSearch = (e:string)=>{
+    setSearchTerm(e)
+}
+
+const dynamicSearch = ()=>{
+  return filterView.filter((name)=> name.recipeTitle.toLocaleLowerCase().includes(serachTerm.toLocaleLowerCase()))
+}
   useEffect(() => {
     setLoading(false);
   },);
@@ -78,10 +89,11 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   return (
     <>
       <header className="App-header">
+       
         <Navigation
           ratingShow={ratingShow}
           setRatingShow={setRatingShow}
-          data={data}
+          data={dynamicSearch()}
           filtered={filtered}
           setFiltered={setFiltered}
           filterData={filterData}
@@ -92,9 +104,16 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
         />
       </header>
       {loading && <h2>LOADING</h2>}
+      <div className="FilterBuddy">
+        <h4>Search Receipe Titles</h4>
+        <input type="text" value={serachTerm} onChange={(e)=>editSearch(e.currentTarget.value)} placeholder="Search for Recipe" className="filterBuddydetail"/>
+       
+        </div>  
       <div className="RecipeSection">
-        {data &&
-          data
+      {/* <FilterBuddy/> */}
+  
+        {dynamicSearch() &&
+          dynamicSearch()
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard" key={`recipeCard${index}`}>
