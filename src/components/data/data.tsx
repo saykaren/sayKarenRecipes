@@ -178,7 +178,7 @@ export const RecipeData = [
       "Chop the tomatoes and set aside",
       "In a 1 1/2 quart pan heat the oil and add the flour and brown.",
       "Add the chile powder and stir all together being careful not to let it burn",
-      "Slowly stir in the water",
+      "Slowly stir in 2 cups of water",
       "Add the garlic, oregano and salt. Stir",
       "Add the chopped tomatoes",
       "Pull just enough pieces from the chicken and add to the pot",
