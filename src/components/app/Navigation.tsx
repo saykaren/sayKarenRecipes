@@ -1,17 +1,12 @@
-import sayKarenLogo from '../assests/sayKaren_logo-white_8.1.2019.png';
-import React, { useState } from 'react';
-import RecipeDataInterface from '../Interface/RecipeDataInterface';
-import RecipeData from '../data/data';
+import sayKarenLogo from "../assests/sayKaren_logo-white_8.1.2019.png";
+import React, { useState } from "react";
+import RecipeDataInterface from "../Interface/RecipeDataInterface";
+import RecipeData from "../data/data";
 
 interface NavigationProps {
   setRatingShow: (arg1: boolean) => void;
   ratingShow: boolean;
-  filtered: string;
-  setFiltered: (arg1: string) => void;
-  data: Array<RecipeDataInterface>;
-  filterData: (arg1: string) => void;
   clearFilter: () => void;
-  filterBoolean: (arg1: number) => void;
   updateActive: (arg1: boolean) => void;
   activeAllStatus: boolean;
 }
@@ -19,69 +14,23 @@ interface NavigationProps {
 const Navigation = ({
   ratingShow,
   setRatingShow,
-  filtered,
-  setFiltered,
-  data,
-  filterData,
   clearFilter,
-  filterBoolean,
   updateActive,
   activeAllStatus,
 }: NavigationProps) => {
   const [nav, setNav] = useState(false);
-
-  const handleChange = (e: string) => {
-    setFiltered(e);
-    filterData(e);
-    setNav(false);
-  };
-
   const toggle = () => {
     setNav(!nav);
   };
 
   return (
     <>
-      <div id={nav ? 'navigationActive' : 'navigation'}>
-        <div onClick={() => toggle()}>{nav ? <span className="navX">&#10005;</span> : <span>&#9776;</span>}</div>
+      <div id={nav ? "navigationActive" : "navigation"}>
+        <div onClick={() => toggle()}>
+          {nav ? <span className="navX">&#10005;</span> : <span>&#9776;</span>}
+        </div>
         {nav && (
           <>
-            <div className="navItem">
-              <label>Filter by Recipe</label>
-              <select
-                id="RecipeFilter"
-                value={filtered}
-                onChange={(e) => handleChange(e.currentTarget.value)}
-                className="RecipeFilterClass"
-              >
-                {RecipeData &&
-                  RecipeData.sort((a, b) =>
-                    a.recipeTitle.localeCompare(b.recipeTitle),
-                  ).map((recipe, indexRecipe) => (
-                    <option value={recipe.recipeTitle} key={indexRecipe}>
-                      {recipe.recipeTitle}
-                    </option>
-                  ))}
-              </select>
-            </div>
-            <div className="navItem">
-              <label>Filter by Week </label>
-              <select
-                id="WeekFilter"
-                value={filtered}
-                onChange={(e) =>
-                  filterBoolean(parseInt(e.currentTarget.value, 10))
-                }
-                className="RecipeFilterClass"
-              >
-                <option value={0}>Select One</option>
-                <option value={1}>1</option>
-                <option value={2}>2</option>
-                <option value={3}>3</option>
-                <option value={4}>4</option>
-              </select>
-            </div>
-
             <button onClick={() => clearFilter()}>Clear Filter</button>
             {activeAllStatus ? (
               <>
@@ -90,7 +39,7 @@ const Navigation = ({
                   onClick={() => setRatingShow(!ratingShow)}
                   className="navItem"
                 >
-                  {ratingShow ? 'Hide' : 'Show'} Lilly Rating
+                  {ratingShow ? "Hide" : "Show"} Lilly Rating
                 </button>
               </>
             ) : (
@@ -100,9 +49,8 @@ const Navigation = ({
         )}
       </div>
       <h2>
-
         <img src={sayKarenLogo} id="sayKaren" alt="sayKaren" />
-        <span id='appTitle'>'s Recipe Box</span>
+        <span id="appTitle">'s Recipe Box</span>
       </h2>
     </>
   );

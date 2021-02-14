@@ -5,8 +5,7 @@ import Lilly_Good from "../assests/Lilly_Good.jpg";
 import Lilly_Bad from "../assests/Lilly_Bad.jpg";
 import Lilly_Okay from "../assests/Lilly_Okay.jpg";
 import Navigation from "./Navigation";
-import Groceries from './Groceries';
-import FilterBuddy from './FilterBuddy';
+import Groceries from "./Groceries";
 
 interface RecipeSectionProps {
   // data: Array<RecipeDataInterface>;
@@ -18,24 +17,28 @@ interface RecipeSectionProps {
 const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [data, setData] = useState(RecipeData);
   const [loading, setLoading] = useState(false);
-  const [filtered, setFiltered] = useState("");
+  const [filteredWeek, setFilteredWeek] = useState(0);
   const [activeAllStatus, setActiveAllStatus] = useState(false);
 
   const [filterView, setFilterView] = useState(RecipeData);
-  const [serachTerm, setSearchTerm] = useState('');
-  // const [activeIngredients, setActiveIngredients] = useState([]);
-  // const [grocery, setGrocery] = useState(false);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const editSearch = (e:string)=>{
-    setSearchTerm(e)
-}
+  const editSearch = (e: string) => {
+    setSearchTerm(e);
+    setFilterView(
+      data.filter((name) =>
+        name.recipeTitle
+          .toLocaleLowerCase()
+          .includes(searchTerm.toLocaleLowerCase())
+      )
+    );
+  };
 
-const dynamicSearch = ()=>{
-  return filterView.filter((name)=> name.recipeTitle.toLocaleLowerCase().includes(serachTerm.toLocaleLowerCase()))
-}
+  console.log(filteredWeek);
+
   useEffect(() => {
     setLoading(false);
-  },);
+  });
 
   const updateState = (indexNumber: number) => {
     toggle(indexNumber);
@@ -52,72 +55,83 @@ const dynamicSearch = ()=>{
     setLoading(true);
     const activity = data[indexNumber].groceryList;
     const newData = data;
-    newData[indexNumber].groceryList = !activity;  
+    newData[indexNumber].groceryList = !activity;
     setData(newData);
-  }
+  };
 
   const clearFilter = () => {
     setLoading(true);
-    setData(RecipeData);
+    setFilterView(RecipeData);
+    setFilteredWeek(0);
+    setSearchTerm("");
   };
 
   const updateActive = (change: boolean) => {
     setLoading(true);
     const newData = RecipeData;
     newData.map((data) => (data.active = change));
-    setData(newData);
+    setFilterView(newData);
     setActiveAllStatus(change);
   };
 
-  const filterData = (title: string) => {
-    const newFiltered = RecipeData.filter(
-      (titleName) => titleName.recipeTitle === title
-    );
-    newFiltered[0].active = true;
-    setData(newFiltered);
-  };
 
   const filterBoolean = (weekNumber: number) => {
     if (weekNumber > 0) {
       const newFiltered = RecipeData.filter(
         (sectionName) => sectionName.week === weekNumber
       );
-      setData(newFiltered);
+      setFilteredWeek(weekNumber);
+      setFilterView(newFiltered);
     }
   };
 
   return (
     <>
       <header className="App-header">
-       
         <Navigation
           ratingShow={ratingShow}
           setRatingShow={setRatingShow}
-          data={dynamicSearch()}
-          filtered={filtered}
-          setFiltered={setFiltered}
-          filterData={filterData}
-          clearFilter={clearFilter}
-          filterBoolean={filterBoolean}
+             clearFilter={clearFilter}
           updateActive={updateActive}
           activeAllStatus={activeAllStatus}
         />
       </header>
       {loading && <h2>LOADING</h2>}
+      <div id="FilterBuddySection">
       <div className="FilterBuddy">
         <h4>Search Receipe Titles</h4>
-        <input type="text" value={serachTerm} onChange={(e)=>editSearch(e.currentTarget.value)} placeholder="Search for Recipe" className="filterBuddydetail"/>
-       
-        </div>  
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => editSearch(e.currentTarget.value)}
+          placeholder="Search for Recipe"
+          className="filterBuddydetail"
+        />
+      </div>
+      <div className="FilterBuddy">
+        <h4>Search Week</h4>
+        <select
+          id="WeekFilter"
+          value={filteredWeek}
+          onChange={(e) => filterBoolean(parseInt(e.currentTarget.value, 10))}
+          placeholder="Search for Recipe"
+          className="filterBuddydetail"
+        >
+          <option value={0}>Select One</option>
+          <option value={1}>1</option>
+          <option value={2}>2</option>
+          <option value={3}>3</option>
+          <option value={4}>4</option>
+        </select>
+        <button onClick={() => clearFilter()} className="buttonClear">Clear Filter</button>
+      </div>
+      </div>
       <div className="RecipeSection">
-      {/* <FilterBuddy/> */}
-  
-        {dynamicSearch() &&
-          dynamicSearch()
+        {filterView &&
+          filterView
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard" key={`recipeCard${index}`}>
-                
                 {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
                 <button onClick={() => updateState(index)}>Toggle</button>
                 {num.active && (
@@ -173,8 +187,13 @@ const dynamicSearch = ()=>{
                     )}
                   </>
                 )}
-                {num.groceryList ? <div
-                onClick={()=>updateGrocery(index)} >Added</div> : <div onClick={()=>updateGrocery(index)}>ADD: Grocery List</div>}
+                {num.groceryList ? (
+                  <div onClick={() => updateGrocery(index)}>Added</div>
+                ) : (
+                  <div onClick={() => updateGrocery(index)}>
+                    ADD: Grocery List
+                  </div>
+                )}
                 {num.active && (
                   <div
                     className="closeButton"
