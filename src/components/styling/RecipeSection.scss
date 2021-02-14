@@ -1,5 +1,10 @@
 @import './variables.scss';
 
+.buttonClear{
+  height: 31px;
+  margin-top: 10px;
+}
+
 .RecipeSection {
   display: flex;
   flex-direction: row;
@@ -34,7 +39,7 @@
 }
 
 .FilterBuddy {
-  background-color: $secondary-color;
+  background-color: $primary-color;
   display: flex;
   justify-content: center;
 }
@@ -45,3 +50,10 @@
   border-radius: 10px;
   box-shadow: 3px 4px 10px black ;
 }
+
+#FilterBuddySection {
+  display: flex;
+  justify-content: center;
+  color: $secondary-color;
+}
+
