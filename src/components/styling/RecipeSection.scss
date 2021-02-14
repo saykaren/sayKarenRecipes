@@ -2,7 +2,6 @@
 
 .buttonClear{
   height: 31px;
-  margin-top: 10px;
 }
 
 .RecipeSection {
@@ -53,6 +52,7 @@
 
 #FilterBuddySection {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   color: $secondary-color;
 }
