@@ -8,6 +8,8 @@ import Navigation from "./Navigation";
 import Groceries from "./Groceries";
 import cartImage from "../assests/shoppingCart.png";
 import basket from "../assests/basket.png";
+import toggleOn from "../assests/toggle_on.png";
+import toggleOff from "../assests/toggle_off.png";
 
 interface RecipeSectionProps {
   // data: Array<RecipeDataInterface>;
@@ -47,8 +49,8 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   };
   const toggle = (indexNumber: number) => {
     setLoading(true);
-    const activity = data[indexNumber].active;
-    const newData = data;
+    const activity = filterView[indexNumber].active;
+    const newData = filterView;
     newData[indexNumber].active = !activity;
     setData(newData);
   };
@@ -76,7 +78,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     setActiveAllStatus(change);
   };
 
-
   const filterBoolean = (weekNumber: number) => {
     if (weekNumber > 0) {
       const newFiltered = RecipeData.filter(
@@ -93,40 +94,42 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
         <Navigation
           ratingShow={ratingShow}
           setRatingShow={setRatingShow}
-             clearFilter={clearFilter}
+          clearFilter={clearFilter}
           updateActive={updateActive}
           activeAllStatus={activeAllStatus}
         />
       </header>
       {loading && <h2>LOADING</h2>}
       <div id="FilterBuddySection">
-      <div className="FilterBuddy">
-        <h4>Search Receipe Titles</h4>
-        <input
-          type="text"
-          value={searchTerm}
-          onChange={(e) => editSearch(e.currentTarget.value)}
-          placeholder="Search for Recipe"
-          className="filterBuddydetail"
-        />
-      </div>
-      <div className="FilterBuddy">
-        <h4>Search Week</h4>
-        <select
-          id="WeekFilter"
-          value={filteredWeek}
-          onChange={(e) => filterBoolean(parseInt(e.currentTarget.value, 10))}
-          placeholder="Search for Recipe"
-          className="filterBuddydetail"
-        >
-          <option value={0}>Select One</option>
-          <option value={1}>1</option>
-          <option value={2}>2</option>
-          <option value={3}>3</option>
-          <option value={4}>4</option>
-        </select>
-        <button onClick={() => clearFilter()} className="buttonClear">Clear Filter</button>
-      </div>
+        <div className="FilterBuddy">
+          <h4>Search Receipe Titles</h4>
+          <input
+            type="text"
+            value={searchTerm}
+            onChange={(e) => editSearch(e.currentTarget.value)}
+            placeholder="Search for Recipe"
+            className="filterBuddydetail"
+          />
+        </div>
+        <div className="FilterBuddy">
+          <h4>Search Week</h4>
+          <select
+            id="WeekFilter"
+            value={filteredWeek}
+            onChange={(e) => filterBoolean(parseInt(e.currentTarget.value, 10))}
+            placeholder="Search for Recipe"
+            className="filterBuddydetail"
+          >
+            <option value={0}>Select One</option>
+            <option value={1}>1</option>
+            <option value={2}>2</option>
+            <option value={3}>3</option>
+            <option value={4}>4</option>
+          </select>
+          <button onClick={() => clearFilter()} className="buttonClear">
+            Clear Filter
+          </button>
+        </div>
       </div>
       <div className="RecipeSection">
         {filterView &&
@@ -134,8 +137,13 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard" key={`recipeCard${index}`}>
+                             {num.active ? (
+                  <img src={toggleOn} onClick={() => updateState(index)} />
+                ) : (
+                  <img src={toggleOff} onClick={() => updateState(index)} />
+                )}
                 {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
-                <button onClick={() => updateState(index)}>Toggle</button>
+
                 {num.active && (
                   <>
                     <div className={`ingredients ${index}`}>
@@ -190,11 +198,12 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                   </>
                 )}
                 {num.groceryList ? (
-                  <div onClick={() => updateGrocery(index)}><img src={basket} alt="Added"/></div>
+                  <div onClick={() => updateGrocery(index)}>
+                    <img src={basket} alt="Added" />
+                  </div>
                 ) : (
                   <div onClick={() => updateGrocery(index)}>
-                    <img src={cartImage} alt="Add Grocery List"/>
-                   
+                    <img src={cartImage} alt="Add Grocery List" />
                   </div>
                 )}
                 {num.active && (
