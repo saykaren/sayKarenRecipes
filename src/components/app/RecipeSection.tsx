@@ -6,6 +6,8 @@ import Lilly_Bad from "../assests/Lilly_Bad.jpg";
 import Lilly_Okay from "../assests/Lilly_Okay.jpg";
 import Navigation from "./Navigation";
 import Groceries from "./Groceries";
+import cartImage from "../assests/shoppingCart.png";
+import basket from "../assests/basket.png";
 
 interface RecipeSectionProps {
   // data: Array<RecipeDataInterface>;
@@ -188,10 +190,11 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                   </>
                 )}
                 {num.groceryList ? (
-                  <div onClick={() => updateGrocery(index)}>Added</div>
+                  <div onClick={() => updateGrocery(index)}><img src={basket} alt="Added"/></div>
                 ) : (
                   <div onClick={() => updateGrocery(index)}>
-                    ADD: Grocery List
+                    <img src={cartImage} alt="Add Grocery List"/>
+                   
                   </div>
                 )}
                 {num.active && (
