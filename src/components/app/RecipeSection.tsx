@@ -27,10 +27,12 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [filterView, setFilterView] = useState(RecipeData);
   const [searchTerm, setSearchTerm] = useState("");
 
+  console.log({searchTerm});
+
   const editSearch = (e: string) => {
     setSearchTerm(e);
     setFilterView(
-      data.filter((name) =>
+      RecipeData.filter((name) =>
         name.recipeTitle
           .toLocaleLowerCase()
           .includes(searchTerm.toLocaleLowerCase())
