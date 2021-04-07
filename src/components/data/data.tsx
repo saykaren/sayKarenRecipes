@@ -102,7 +102,7 @@ export const RecipeData = [
     ingredients: [
       { type: "Butter", section: "NonPerishables", amount: "2 Tablesppon" },
       { type: "Chicken", section: "Meat", amount: "1-2" },
-      { type: "Cream to Chicken Soup", section: "NonPerishables", amount: "1 can" },
+      { type: "Cream of Chicken Soup", section: "NonPerishables", amount: "1 can" },
       { type: "Pesto", section: "NonPerishables", amount: "1/2 jar" },
       { type: "Milk", section: "Dairy", amount: "1/2 cup" },
       { type: "Farfalle (bow tie)", section: "NonPerishables", amount: "8 ounces" },
@@ -801,7 +801,7 @@ export const RecipeData = [
   },
 
   {
-    recipeTitle: "California Rolls",
+    recipeTitle: "California Rolls - Sushi",
     ingredients: [
       { type: "Sushi rice", section: "NonPerishables", amount: "2 cups" },
       { type: "seasoned rice vinegar", section: "NonPerishables", amount: "1/4 cup" },
@@ -889,7 +889,24 @@ export const RecipeData = [
     week: 1,
   groceryList: false,
   },
-    // {
+    {
+    recipeTitle: 'Spicy Tuna - Sushi',
+    ingredients: [
+      { type: 'Tuna', section: "NonPerishables", amount: '4oz' },
+      { type: 'Sriracha', section: "NonPerishables", amount: '3 TSP' },
+      { type: 'Onions-Green', section: "NonPerishables", amount: '2' },
+      { type: 'Spicy Mayo', section: "NonPerishables", amount: 'As needed' },
+    ],
+    preparationTime: 5,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [''],
+    instructions: ['Mix together',],
+    active: false,
+    lillyRating: 1,
+    week: 1,
+  groceryList: false,
+  },
+      // {
   //   recipeTitle: 'Template',
   //   ingredients: [{ type: '?', section: "NonPerishables", amount: '?' },],
   //   preparationTime: 0,
