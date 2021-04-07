@@ -887,7 +887,7 @@ export const RecipeData = [
     active: false,
     lillyRating: 3,
     week: 1,
-  groceryList: false,
+  groceryList: true,
   },
     {
     recipeTitle: 'Spicy Tuna - Sushi',
