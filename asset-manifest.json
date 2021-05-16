@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/sayKarenRecipes/static/css/main.e554dda8.chunk.css",
-    "main.js": "/sayKarenRecipes/static/js/main.e068ea59.chunk.js",
-    "main.js.map": "/sayKarenRecipes/static/js/main.e068ea59.chunk.js.map",
+    "main.js": "/sayKarenRecipes/static/js/main.ee72f888.chunk.js",
+    "main.js.map": "/sayKarenRecipes/static/js/main.ee72f888.chunk.js.map",
     "runtime-main.js": "/sayKarenRecipes/static/js/runtime-main.f88494eb.js",
     "runtime-main.js.map": "/sayKarenRecipes/static/js/runtime-main.f88494eb.js.map",
     "static/js/2.4ace0c80.chunk.js": "/sayKarenRecipes/static/js/2.4ace0c80.chunk.js",
@@ -21,6 +21,6 @@
     "static/js/runtime-main.f88494eb.js",
     "static/js/2.4ace0c80.chunk.js",
     "static/css/main.e554dda8.chunk.css",
-    "static/js/main.e068ea59.chunk.js"
+    "static/js/main.ee72f888.chunk.js"
   ]
 }
