@@ -906,6 +906,22 @@ export const RecipeData = [
     week: 1,
   groceryList: false,
   },
+        {
+    recipeTitle: 'Stovetop Rice',
+    ingredients: [{ type: 'Rice', section: "NonPerishables", amount: '1 cup' },
+    { type: 'Water', section: "NonPerishables", amount: '2 cup' },
+    { type: 'Butter', section: "Dairy", amount: '1 Tablesppon' },
+   
+  ],
+    preparationTime: 30,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [''],
+    instructions: ['Bring the water to boil. Add the salt and butter and allow the butter to melt', 'When the water has returned to a boil, stir in the rice.', 'Let the water return to a light simmer', 'Stir again, cover the pot and turn the heat down to low.', 'Cook for 18 minutes without removing the lid'],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  groceryList: false,
+  },
       // {
   //   recipeTitle: 'Template',
   //   ingredients: [{ type: '?', section: "NonPerishables", amount: '?' },],
