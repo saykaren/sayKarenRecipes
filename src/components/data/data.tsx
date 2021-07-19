@@ -1174,6 +1174,32 @@ export const RecipeData = [
     week: 1,
     groceryList: false,
   },
+  {
+    recipeTitle: "Banana Bread Recipe",
+    ingredients: [
+      { type: "Flour-sifted", section: "NonPerishables", amount: "1 3/4 cups" },
+      { type: "Baking powder", section: "NonPerishables", amount: "2 1/4 Tsp" },
+      { type: "Salt", section: "NonPerishables", amount: "1/2 Tsp" },
+      { type: "Shortening", section: "NonPerishables", amount: "1/3 cup" },
+      { type: "Sugar", section: "NonPerishables", amount: "2/3 cups" },
+      { type: "Eggs", section: "Dairy", amount: "1-2" },
+      { type: "Ripe Banana", section: "Produce", amount: "2-3" },
+    ],
+
+    preparationTime: 60,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: ["Oven"],
+    instructions: [
+      "Add sugar (2/3 cups) and shortening (1/3 cups)",
+      "Add shifted flour, baking powder and salt.",
+      "Beat in eggs and Banana",
+      "Greese pan and cook 60-60 minutes at 350 degrees",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [{ type: '?', section: "NonPerishables", amount: '?' },],
@@ -1186,6 +1212,7 @@ export const RecipeData = [
   //   week: 1,
   // groceryList: false,
   // },
+  //Frozen / Produce /NonPerishables / Meat / Dairy
 ];
 
 export default RecipeData;
