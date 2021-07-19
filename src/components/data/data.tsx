@@ -37,6 +37,7 @@ export const RecipeData = [
     lillyRating: 2,
     week: 3,
     groceryList: false,
+    calories: 832,
   },
   {
     recipeTitle: "Chicken Enchilada Soup",
@@ -90,6 +91,7 @@ export const RecipeData = [
     lillyRating: 1,
     week: 1,
     groceryList: false,
+    calories: 425,
   },
   {
     recipeTitle: "White Chicken Chili",
@@ -177,6 +179,7 @@ export const RecipeData = [
     lillyRating: 3,
     week: 1,
     groceryList: false,
+    calories: 864,
   },
 
   {
@@ -217,6 +220,7 @@ export const RecipeData = [
     week: 2,
     lillyRating: 2,
     groceryList: false,
+    calories: 323,
   },
   {
     recipeTitle: "Grandpa Garcia's Red Chile With Chicken",
@@ -567,6 +571,7 @@ export const RecipeData = [
     lillyRating: 3,
     week: 3,
     groceryList: false,
+    calories: 671,
   },
   {
     recipeTitle: "Gram's Sloppy Joes",
@@ -594,6 +599,7 @@ export const RecipeData = [
     week: 2,
     lillyRating: 3,
     groceryList: false,
+    calories: 507,
   },
   {
     recipeTitle: "Tacos",
@@ -648,6 +654,7 @@ export const RecipeData = [
     lillyRating: 1,
     week: 2,
     groceryList: false,
+    calories: 413,
   },
   {
     recipeTitle: "Beef Stroganoff",
@@ -695,6 +702,7 @@ export const RecipeData = [
     week: 2,
     lillyRating: 3,
     groceryList: false,
+    calories: 453,
   },
   {
     recipeTitle: "Breakfast For Dinner",
@@ -773,6 +781,7 @@ export const RecipeData = [
     week: 3,
     lillyRating: 1,
     groceryList: false,
+    calories: 463,
   },
   {
     recipeTitle: "Roasted Chicken and Mashpotatoes",
@@ -1073,6 +1082,7 @@ export const RecipeData = [
     lillyRating: 2,
     week: 2,
     groceryList: false,
+    calories: 915,
   },
   {
     recipeTitle: "Japanese Steakhouse Fried Rice",
