@@ -14,6 +14,7 @@ export interface RecipeDataInterface {
   lillyRating?: number;
   week?: number;
   groceryList?: boolean,
+  calories?: number;
 }
 
 export default RecipeDataInterface;

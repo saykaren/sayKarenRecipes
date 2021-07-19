@@ -199,8 +199,17 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                         <b>Week:</b> {num.week}
                       </div>
                     )}
+                    {num.calories && (
+                      <div className={`instructions ${index}`}>
+                        <div>
+                          <b>Calories: </b>
+                          {num.calories}
+                        </div>
+                      </div>
+                    )}
                   </>
                 )}
+
                 {num.groceryList ? (
                   <div onClick={() => updateGrocery(index)}>
                     <img src={basket} alt="Added" />
