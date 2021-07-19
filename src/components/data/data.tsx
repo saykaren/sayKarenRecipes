@@ -407,6 +407,7 @@ export const RecipeData = [
       },
       { type: "White Wine", section: "NonPerishables", amount: "1/2 cup" },
       { type: "Salt & Pepper", section: "NonPerishables", amount: "To taste" },
+      { type: "Onion", section: "NonPerishables", amount: "1/4" },
     ],
     preparationTime: 30,
     preparationMeasurement: "Minutes",
