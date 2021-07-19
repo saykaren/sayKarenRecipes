@@ -27,7 +27,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [filterView, setFilterView] = useState(RecipeData);
   const [searchTerm, setSearchTerm] = useState("");
 
-  console.log({searchTerm});
+  console.log({ searchTerm });
 
   const editSearch = (e: string) => {
     setSearchTerm(e);
@@ -139,7 +139,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard" key={`recipeCard${index}`}>
-                             {num.active ? (
+                {num.active ? (
                   <img src={toggleOn} onClick={() => updateState(index)} />
                 ) : (
                   <img src={toggleOff} onClick={() => updateState(index)} />
@@ -164,11 +164,13 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                       )}
 
                       <h3>Ingredients</h3>
-                      {num.ingredients.map((ingred, indexIngred) => (
-                        <div key={indexIngred}>
-                          &#9832;{ingred.type} <b>:</b> {ingred.amount}
-                        </div>
-                      ))}
+                      {num.ingredients
+                        .sort((a, b) => a.type.localeCompare(b.type))
+                        .map((ingred, indexIngred) => (
+                          <div key={indexIngred}>
+                            &#9832;{ingred.type} <b>:</b> {ingred.amount}
+                          </div>
+                        ))}
                     </div>
                     <div className={`instructions ${index}`}>
                       <h3>Instructions</h3>
