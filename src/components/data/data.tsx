@@ -1221,9 +1221,54 @@ export const RecipeData = [
     week: 1,
     groceryList: false,
   },
+  {
+    recipeTitle: "Chicken Enchiladas",
+    ingredients: [
+      { type: "Onion", section: "Produce", amount: "1 cup" },
+      { type: "Butter", section: "Dairy", amount: "2 Tbs" },
+      { type: "Chicken", section: "Meat", amount: "2 cups" },
+      { type: "Green Chiles", section: "Produce", amount: "4oz can-chopped" },
+      { type: "Flour", section: "NonPerishables", amount: "1/4 cup" },
+      { type: "Coriander seeed", section: "NonPerishables", amount: "1 Tsp" },
+      { type: "Salt", section: "NonPerishables", amount: "3/4 Tsp" },
+      {
+        type: "Chicken Broth",
+        section: "NonPerishables",
+        amount: "2 1/2 cups",
+      },
+      { type: "Sour Cream", section: "Dairy", amount: "1 cup" },
+      { type: "Monterey Jack Cheese", section: "Dairy", amount: "1 1/2 cups" },
+      { type: "Tortiallas", section: "Bread", amount: "12" },
+      { type: "Pam Cooking Spray", section: "NonPerishables", amount: "1" },
+    ],
+    preparationTime: 55,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: ["13x9x2 baking dish"],
+    instructions: [
+      "Large saucepan cook onions in the 2 Tbs of butter until tender",
+      "Combine in a bowl with chopped chicken and green chiles. Set aside",
+      "In same saucepan, melt 3 Tbs butter. Blend in flour (1/4cup), coriander(1 Tsp), and salt (3/4 Tsp).",
+      "Stir in chicken broth (or stock with water) all at once.",
+      "Cook and stir till thickened and bubbly. Remove from heat",
+      "Stir in sour cream, and 1/2 cup of cheese.",
+      "Fill each tortilla 1/4 cup of chicken mixture.",
+      "Greese 13x9x2 baking dish with Pam.",
+      "Roll up and arrange in baking dish",
+      "Pour remaining sauce over tortillas.",
+      "Sprinkle with remaining cheese.",
+      "Bake uncovered in 350 degrees oven for 25 minutes or until bubbly",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+  },
+  //Frozen / Produce /NonPerishables / Meat / Dairy / Bread
   // {
   //   recipeTitle: 'Template',
-  //   ingredients: [{ type: '?', section: "NonPerishables", amount: '?' },],
+  //   ingredients: [
+  //  { type: '??????', section: "NonPerishables", amount: '?????' },
+  // ],
   //   preparationTime: 0,
   //   preparationMeasurement: 'hours',
   //   requiredInstruments: ['Crock-Pot'],
@@ -1233,7 +1278,6 @@ export const RecipeData = [
   //   week: 1,
   // groceryList: false,
   // },
-  //Frozen / Produce /NonPerishables / Meat / Dairy
 ];
 
 export default RecipeData;
