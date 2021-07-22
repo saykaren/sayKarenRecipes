@@ -890,7 +890,7 @@ export const RecipeData = [
     groceryList: false,
   },
   {
-    recipeTitle: "Tikka Masala",
+    recipeTitle: "Tikka Masala - Indian",
     ingredients: [
       {
         type: "Tikka Masala Sauce",
@@ -1305,7 +1305,30 @@ export const RecipeData = [
     groceryList: false,
     calories: 142,
   },
-  //Frozen / Produce /NonPerishables / Meat / Dairy / Bread
+  {
+    recipeTitle: "Aarons Smoothie",
+    ingredients: [
+      { type: "Banana", section: "Produce", amount: "1" },
+      { type: "Kale-Frozen", section: "Produce", amount: "1 cup" },
+      { type: "Berries-Frozen", section: "Frozen", amount: "1 cup" },
+      { type: "Orange Juice", section: "Dairy", amount: "1/2 cup" },
+      { type: "Oatmilk", section: "Dairy", amount: "1/2 cup+" },
+    ],
+    preparationTime: 5,
+    preparationMeasurement: "minutes",
+    requiredInstruments: ["Ninja"],
+    instructions: [
+      "Put Banana in first",
+      "Then frozen kale and berries",
+      "Orange juice next",
+      "Then pour in oatmilk until the fill line",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 383,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
@@ -1321,6 +1344,7 @@ export const RecipeData = [
   // groceryList: false,
   // calories: 0,
   // },
+  //Frozen / Produce /NonPerishables / Meat / Dairy / Bread
 ];
 
 export default RecipeData;
