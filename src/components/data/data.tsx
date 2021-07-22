@@ -1274,6 +1274,37 @@ export const RecipeData = [
     week: 1,
     groceryList: false,
   },
+  {
+    recipeTitle: "Kale Salad",
+    ingredients: [
+      { type: "Kale", section: "Produce", amount: "2 cups" },
+      {
+        type: "Broccoli and Clover Sprouts",
+        section: "Produce",
+        amount: "1/2 cup",
+      },
+      {
+        type: "Olive Garden Dressing",
+        section: "NonPerishables",
+        amount: "1 Tbs",
+      },
+      {
+        type: "Summer Salad Topping",
+        section: "NonPerishables",
+        amount: "0.1 cup",
+      },
+      { type: "Cabbage-Red", section: "Produce", amount: "1/2 cup" },
+    ],
+    preparationTime: 15,
+    preparationMeasurement: "minutes",
+    requiredInstruments: [],
+    instructions: ["Cut Kale and/or Cabbage and mix altogether"],
+    active: false,
+    lillyRating: 1,
+    week: 1,
+    groceryList: false,
+    calories: 142,
+  },
   //Frozen / Produce /NonPerishables / Meat / Dairy / Bread
   // {
   //   recipeTitle: 'Template',
@@ -1288,6 +1319,7 @@ export const RecipeData = [
   //   lillyRating: 3,
   //   week: 1,
   // groceryList: false,
+  // calories: 0,
   // },
 ];
 
