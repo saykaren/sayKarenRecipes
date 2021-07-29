@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import RecipeData from "../data/data";
-// import RecipeDataInterface from '../Interface/RecipeDataInterface';
+import RecipeDataInterface from "../Interface/RecipeDataInterface";
 import Lilly_Good from "../assests/Lilly_Good.jpg";
 import Lilly_Bad from "../assests/Lilly_Bad.jpg";
 import Lilly_Okay from "../assests/Lilly_Okay.jpg";
@@ -12,48 +12,27 @@ import toggleOn from "../assests/toggle_on.png";
 import toggleOff from "../assests/toggle_off.png";
 
 interface RecipeSectionProps {
-  // data: Array<RecipeDataInterface>;
   ratingShow: boolean;
   setRatingShow: (arg1: boolean) => void;
-  // setData: (arg1:  Array<RecipeDataInterface>) => void;
 }
 
 const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
-  const [data, setData] = useState(RecipeData);
+  const [data, setData] = useState<RecipeDataInterface[]>(RecipeData);
   const [loading, setLoading] = useState(false);
   const [filteredWeek, setFilteredWeek] = useState(0);
   const [activeAllStatus, setActiveAllStatus] = useState(false);
-
-  const [filterView, setFilterView] = useState(RecipeData);
   const [searchTerm, setSearchTerm] = useState("");
-
-  console.log({ searchTerm });
-
-  const editSearch = (e: string) => {
-    setSearchTerm(e);
-    setFilterView(
-      RecipeData.filter((name) =>
-        name.recipeTitle
-          .toLocaleLowerCase()
-          .includes(searchTerm.toLocaleLowerCase())
-      )
-    );
-  };
-
-  console.log(filteredWeek);
 
   useEffect(() => {
     setLoading(false);
   });
 
-  const updateState = (indexNumber: number) => {
-    toggle(indexNumber);
-  };
-  const toggle = (indexNumber: number) => {
-    setLoading(true);
-    const activity = filterView[indexNumber].active;
-    const newData = filterView;
-    newData[indexNumber].active = !activity;
+  const updateState = (selectedRecipeName: string, setValue: boolean) => {
+    const newData = [...data];
+    const indexedItemNumber = newData.findIndex(
+      (element) => (element.recipeTitle = selectedRecipeName)
+    );
+    newData[indexedItemNumber].active = setValue;
     setData(newData);
   };
 
@@ -67,7 +46,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
 
   const clearFilter = () => {
     setLoading(true);
-    setFilterView(RecipeData);
+    // setFilterView(RecipeData);
     setFilteredWeek(0);
     setSearchTerm("");
   };
@@ -76,7 +55,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     setLoading(true);
     const newData = RecipeData;
     newData.map((data) => (data.active = change));
-    setFilterView(newData);
+    // setFilterView(newData);
     setActiveAllStatus(change);
   };
 
@@ -86,7 +65,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
         (sectionName) => sectionName.week === weekNumber
       );
       setFilteredWeek(weekNumber);
-      setFilterView(newFiltered);
+      // setFilterView(newFiltered);
     }
   };
 
@@ -108,7 +87,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
           <input
             type="text"
             value={searchTerm}
-            onChange={(e) => editSearch(e.currentTarget.value)}
+            onChange={(e) => setSearchTerm(e.currentTarget.value)}
             placeholder="Search for Recipe"
             className="filterBuddydetail"
           />
@@ -134,18 +113,21 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
         </div>
       </div>
       <div className="RecipeSection">
-        {filterView &&
-          filterView
+        {data &&
+          data
+            .filter((item) =>
+              item.recipeTitle
+                .toLocaleLowerCase()
+                .includes(searchTerm.toLocaleLowerCase())
+            )
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard" key={`recipeCard${index}`}>
-                {num.active ? (
-                  <img src={toggleOn} onClick={() => updateState(index)} />
-                ) : (
-                  <img src={toggleOff} onClick={() => updateState(index)} />
-                )}
-                {num && <h2 key={`recipeTitle${index}`}> {num.recipeTitle}</h2>}
-
+                <img
+                  src={num.active ? toggleOn : toggleOff}
+                  onClick={() => updateState(num.recipeTitle, !num.active)}
+                />
+                {num && <h2 key={`recipeTitle${index}`}>{num.recipeTitle}</h2>}
                 {num.active && (
                   <>
                     <div className={`ingredients ${index}`}>
@@ -209,7 +191,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                     )}
                   </>
                 )}
-
                 {num.groceryList ? (
                   <div onClick={() => updateGrocery(index)}>
                     <img src={basket} alt="Added" />
@@ -222,7 +203,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                 {num.active && (
                   <div
                     className="closeButton"
-                    onClick={() => updateState(index)}
+                    onClick={() => updateState(num.recipeTitle, !num.active)}
                   >
                     &#8682;
                   </div>
