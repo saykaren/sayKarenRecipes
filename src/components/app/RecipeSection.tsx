@@ -29,10 +29,11 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
 
   const updateState = (selectedRecipeName: string, setValue: boolean) => {
     const newData = [...data];
-    const indexedItemNumber = newData.findIndex(
-      (element) => (element.recipeTitle = selectedRecipeName)
-    );
-    newData[indexedItemNumber].active = setValue;
+    newData.map((recipe) => {
+      if (recipe.recipeTitle === selectedRecipeName) {
+        recipe.active = setValue;
+      }
+    });
     setData(newData);
   };
 
@@ -46,7 +47,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
 
   const clearFilter = () => {
     setLoading(true);
-    // setFilterView(RecipeData);
     setFilteredWeek(0);
     setSearchTerm("");
   };
@@ -55,7 +55,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     setLoading(true);
     const newData = RecipeData;
     newData.map((data) => (data.active = change));
-    // setFilterView(newData);
     setActiveAllStatus(change);
   };
 
@@ -65,7 +64,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
         (sectionName) => sectionName.week === weekNumber
       );
       setFilteredWeek(weekNumber);
-      // setFilterView(newFiltered);
     }
   };
 
