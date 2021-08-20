@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import RecipeDataInterface from '../Interface/RecipeDataInterface';
 import RecipeData from '../data/data';
 
 
