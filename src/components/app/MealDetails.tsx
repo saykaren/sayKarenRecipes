@@ -17,7 +17,6 @@ const MealDetails = ({ meal }: MealDetailsProps) => {
         )}
         {meal.strMeal && <h3>Name: {meal.strMeal}</h3>}
       </div>
-
       {meal.strCategory && <p>Category: {meal.strCategory}</p>}
       {meal.strInstructions && (
         <details>
@@ -33,7 +32,6 @@ const MealDetails = ({ meal }: MealDetailsProps) => {
           </a>
         </p>
       )}
-
     </div>
   );
 };

@@ -25,16 +25,18 @@ const MealFinder = ({}: MealFinderProps) => {
 
   return (
     <div id="MealFinder">
-      <h3> Meal Searcher</h3>
-      <input
-        type="text"
-        value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
-        placeholder="Search Page"
-        id="inputSearchTerm"
-      />
-      <div className="button" onClick={() => updateSearch(searchTerm)}>
-        submit {mealName}
+      <h3 id="MealTitle"> Meal Searcher</h3>
+      <div id="FilterBuddySection">
+        <input
+          type="text"
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+          placeholder="Search API"
+          id="inputSearchTerm"
+        />
+        <div className="button" onClick={() => updateSearch(searchTerm)}>
+          Search
+        </div>
       </div>
       {mealData.status === "success" && (
         <div className="mealFinderContainer">

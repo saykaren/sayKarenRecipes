@@ -8,13 +8,18 @@ import MealFinder from './MealFinder';
 
 const App = () => {
   const [ratingShow, setRatingShow] = useState(true);
+  const [activeModule, setActieModule] = useState("Recipe");
 
   const queryClient = new QueryClient();
 
   return (
     <QueryClientProvider client={queryClient}>
-       <MealFinder/>
-      <RecipeSection ratingShow={ratingShow} setRatingShow={setRatingShow} />
+      <section className="appSwitch">
+      <div className={activeModule === "Recipe" ? "appButton disable" : "appButton"} onClick={()=>setActieModule("Recipe")}>Recipe Box</div>
+      <div className={activeModule === "Meal" ? "appButton disable" : "appButton"} onClick={()=>setActieModule("Meal")}>Meal Finder</div>
+      </section>
+       {activeModule === "Meal" && <MealFinder/>}
+      { activeModule === "Recipe" && <RecipeSection ratingShow={ratingShow} setRatingShow={setRatingShow} />}
      
       <Footer />
       <ReactQueryDevtools initialIsOpen={false} position={"bottom-right"} />
