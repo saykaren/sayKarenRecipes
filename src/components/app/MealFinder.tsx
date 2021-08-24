@@ -6,9 +6,10 @@ import MealDetails from "./MealDetails";
 export interface MealFinderProps {}
 
 const MealFinder = ({}: MealFinderProps) => {
+
   const [mealName, setMealName] = useState("Arrabiat");
   const [searchTerm, setSearchTerm] = useState("");
-  const mealData = useQuery(
+  const {data, status} = useQuery(
     [
       "meal",
       "https://www.themealdb.com/api/json/v1/1/",
@@ -38,14 +39,24 @@ const MealFinder = ({}: MealFinderProps) => {
           Search
         </div>
       </div>
-      {mealData.status === "success" && (
-        <div className="mealFinderContainer">
-          {mealData.data.meals.length > 0 &&
-            mealData.data.meals.map((meal: any, mealIndex: number) => (
-              <div key={mealIndex}>
-                <MealDetails meal={meal} />
-              </div>
-            ))}
+      {status === "error" && (
+    <div>
+      Error Fetching Data <button onClick={() => console.log('clean up')}>Clear</button>
+    </div>
+  )}
+  {status === "loading" && <div>Loading Data....</div>}
+  {status === "success" && ( 
+      <div className="mealFinderContainer">
+        {data.meals && data.meals.length >= 1 &&
+          data.meals.map((meal: any, mealIndex: number) => (
+            <div key={mealIndex}>
+              <MealDetails meal={meal} />
+            </div>
+          ))} 
+                 { data.meals == null && (
+         <div>Sorry no meals with {mealName} found!
+            </div>
+          )} 
         </div>
       )}
     </div>
