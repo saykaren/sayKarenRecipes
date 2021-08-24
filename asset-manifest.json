@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/sayKarenRecipes/static/css/main.e554dda8.chunk.css",
-    "main.js": "/sayKarenRecipes/static/js/main.f334f210.chunk.js",
-    "main.js.map": "/sayKarenRecipes/static/js/main.f334f210.chunk.js.map",
-    "runtime-main.js": "/sayKarenRecipes/static/js/runtime-main.0719b10c.js",
-    "runtime-main.js.map": "/sayKarenRecipes/static/js/runtime-main.0719b10c.js.map",
-    "static/js/2.4a7f1484.chunk.js": "/sayKarenRecipes/static/js/2.4a7f1484.chunk.js",
-    "static/js/2.4a7f1484.chunk.js.map": "/sayKarenRecipes/static/js/2.4a7f1484.chunk.js.map",
-    "static/js/3.e950768a.chunk.js": "/sayKarenRecipes/static/js/3.e950768a.chunk.js",
-    "static/js/3.e950768a.chunk.js.map": "/sayKarenRecipes/static/js/3.e950768a.chunk.js.map",
+    "main.css": "/sayKarenRecipes/static/css/main.b71a331c.chunk.css",
+    "main.js": "/sayKarenRecipes/static/js/main.cf3366fb.chunk.js",
+    "main.js.map": "/sayKarenRecipes/static/js/main.cf3366fb.chunk.js.map",
+    "runtime-main.js": "/sayKarenRecipes/static/js/runtime-main.93a71af9.js",
+    "runtime-main.js.map": "/sayKarenRecipes/static/js/runtime-main.93a71af9.js.map",
+    "static/js/2.15f57228.chunk.js": "/sayKarenRecipes/static/js/2.15f57228.chunk.js",
+    "static/js/2.15f57228.chunk.js.map": "/sayKarenRecipes/static/js/2.15f57228.chunk.js.map",
+    "static/js/3.8af9e4aa.chunk.js": "/sayKarenRecipes/static/js/3.8af9e4aa.chunk.js",
+    "static/js/3.8af9e4aa.chunk.js.map": "/sayKarenRecipes/static/js/3.8af9e4aa.chunk.js.map",
     "index.html": "/sayKarenRecipes/index.html",
-    "static/css/main.e554dda8.chunk.css.map": "/sayKarenRecipes/static/css/main.e554dda8.chunk.css.map",
-    "static/js/2.4a7f1484.chunk.js.LICENSE.txt": "/sayKarenRecipes/static/js/2.4a7f1484.chunk.js.LICENSE.txt",
+    "static/css/main.b71a331c.chunk.css.map": "/sayKarenRecipes/static/css/main.b71a331c.chunk.css.map",
+    "static/js/2.15f57228.chunk.js.LICENSE.txt": "/sayKarenRecipes/static/js/2.15f57228.chunk.js.LICENSE.txt",
     "static/media/Lilly_Bad.70636cb5.jpg": "/sayKarenRecipes/static/media/Lilly_Bad.70636cb5.jpg",
     "static/media/Lilly_Good.4b6bde60.jpg": "/sayKarenRecipes/static/media/Lilly_Good.4b6bde60.jpg",
     "static/media/Lilly_Okay.a3b61b4c.jpg": "/sayKarenRecipes/static/media/Lilly_Okay.a3b61b4c.jpg",
     "static/media/sayKaren_logo-white_8.1.2019.a59cbdb0.png": "/sayKarenRecipes/static/media/sayKaren_logo-white_8.1.2019.a59cbdb0.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.0719b10c.js",
-    "static/js/2.4a7f1484.chunk.js",
-    "static/css/main.e554dda8.chunk.css",
-    "static/js/main.f334f210.chunk.js"
+    "static/js/runtime-main.93a71af9.js",
+    "static/js/2.15f57228.chunk.js",
+    "static/css/main.b71a331c.chunk.css",
+    "static/js/main.cf3366fb.chunk.js"
   ]
 }
