@@ -9,8 +9,10 @@ const ingredientArray = [
 ];
 
 const MealDetails = ({ meal }: MealDetailsProps) => {
+
   return (
     <div className="mealDetails">
+    
       <div className="mealHeader">
         {meal.strMealThumb && (
           <img
