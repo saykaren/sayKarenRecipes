@@ -9,35 +9,40 @@ const ingredientArray = [
 ];
 
 const MealDetails = ({ meal }: MealDetailsProps) => {
-
   return (
-    <div className="mealDetails">
-    
-      <div className="mealHeader">
+    <div className="mealDetails cssFriends">
+      <div className="mealHeader cssCloseFriends">
         {meal.strMealThumb && (
           <img
             src={meal.strMealThumb}
             alt="Meal picture"
-            className="mealPicture"
+            className="mealPicture cssBestFriends"
           />
         )}
-        {meal.strMeal && <h3>Name: {meal.strMeal}</h3>}
+        {meal.strMeal && (
+          <h3 className="cssBestFriends">Name: {meal.strMeal}</h3>
+        )}
       </div>
-      {meal.strCategory && <p>Category: {meal.strCategory}</p>}
+      {meal.strCategory && (
+        <div className="cssBestFriends">
+          <span className="boldFont">Category:</span> {meal.strCategory}
+        </div>
+      )}
       {meal.strInstructions && (
-        <details>
-          <summary>Instructions:</summary>
+        <details className="cssBestFriends">
+          <summary className="cssBestFriends boldFont">Instructions:</summary>
           {meal.strInstructions}
         </details>
       )}
-      <details>
-        <summary>Ingredients</summary>
+      <details className="cssBestFriends">
+        <summary className="cssBestFriends boldFont">Ingredients</summary>
         {ingredientArray.map((numberArray, indexArray) => (
-          <div key={indexArray}>
+          <div key={indexArray} >
             {" "}
             {meal[`strIngredient${numberArray}`] &&
-              meal[`strIngredient${numberArray}`].length > 1 && (
-                <li>
+              meal[`strIngredient${numberArray}`].length > 0 &&
+              meal[`strIngredient${numberArray}`] !== "" && (
+                <li className="cssBestFriends">
                   {meal[`strIngredient${numberArray}`]}:{" "}
                   {meal[`strMeasure${numberArray}`]}
                 </li>
@@ -46,12 +51,12 @@ const MealDetails = ({ meal }: MealDetailsProps) => {
         ))}
       </details>
       {meal.strYoutube && (
-        <p>
+        <div className="cssBestFriends">
           <a href={meal.strYoutube} target="_blank" rel="noopener noreferrer">
             {" "}
             YouTube Video
           </a>
-        </p>
+        </div>
       )}
     </div>
   );
