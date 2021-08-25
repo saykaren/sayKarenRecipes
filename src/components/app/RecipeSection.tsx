@@ -120,18 +120,21 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             )
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
-              <div className="recipeCard" key={`recipeCard${index}`}>
+              <div className="recipeCard cssFriends" key={`recipeCard${index}`}>
+                <div className="cssCloseFriends">
                 <img
+                  className="cssBestFriends"
                   src={num.active ? toggleOn : toggleOff}
                   onClick={() => updateState(num.recipeTitle, !num.active)}
                 />
-                {num && <h2 key={`recipeTitle${index}`}>{num.recipeTitle}</h2>}
+                {num && <h2 key={`recipeTitle${index}`} className="cssBestFriends">{num.recipeTitle}</h2>}
+                </div>
                 {num.active && (
                   <>
-                    <div className={`ingredients ${index}`}>
+                    <div className={`ingredients cssCloseFriends`}>
                       {ratingShow && num.lillyRating && (
                         <img
-                          className="LillyRating"
+                          className="LillyRating cssBestFriends"
                           src={
                             num.lillyRating === 1
                               ? Lilly_Bad
@@ -140,34 +143,34 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                               : Lilly_Okay
                           }
                           alt="rating"
+                      
                         />
                       )}
 
-                      <h3>Ingredients</h3>
+                      <h3 className="cssBestFriends">Ingredients</h3>
                       {num.ingredients
                         .sort((a, b) => a.type.localeCompare(b.type))
                         .map((ingred, indexIngred) => (
                           <div key={indexIngred}>
-                            &#9832;{ingred.type} <b>:</b> {ingred.amount}
+                            &#9832; {ingred.type} <b>:</b> {ingred.amount}
                           </div>
                         ))}
                     </div>
-                    <div className={`instructions ${index}`}>
-                      <h3>Instructions</h3>
+                    <div className={`instructions cssCloseFriends`}>
+                      <h3 className="cssBestFriends"
+                      >Instructions</h3>
                       {num.instructions.map((instr, indexInstru) => (
-                        <div>
+                        <div className="cssBestFriends">
                           <b>{indexInstru + 1}.</b> {instr}
-                          <br />
-                          <br />
                         </div>
                       ))}
                     </div>
-                    <div className="ingredients">
+                    <div className="ingredients cssCloseFriends" >
                       <b>Time:</b> {num.preparationTime}{" "}
                       {num.preparationMeasurement}
                     </div>
                     {num.requiredInstruments.length > 0 && (
-                      <div className="ingredients">
+                      <div className="ingredients cssCloseFriends">
                         <b>Required Supplies: </b>{" "}
                         {num.requiredInstruments.map((inst, indexInstru) => (
                           <div key={indexInstru}>{inst}</div>
@@ -175,12 +178,12 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                       </div>
                     )}
                     {num.week && (
-                      <div className="ingredients">
+                      <div className="ingredients cssCloseFriends">
                         <b>Week:</b> {num.week}
                       </div>
                     )}
                     {num.calories && (
-                      <div className={`instructions ${index}`}>
+                      <div className={`instructions cssCloseFriends`}>
                         <div>
                           <b>Calories: </b>
                           {num.calories}

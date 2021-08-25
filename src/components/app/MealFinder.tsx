@@ -26,14 +26,15 @@ const MealFinder = ({}: MealFinderProps) => {
 
   return (
     <div id="MealFinder">
-      <h3 id="MealTitle"> Meal Searcher</h3>
-      <div id="FilterBuddySection">
-        <input
+     <h3 id="MealTitle"> Meal Searcher</h3>
+      <div className="MealHeader">
+           <input
           type="text"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search API"
           id="inputSearchTerm"
+          className="filterBuddydetail"
         />
         <div className="button" onClick={() => updateSearch(searchTerm)}>
           Search
@@ -44,17 +45,17 @@ const MealFinder = ({}: MealFinderProps) => {
       Error Fetching Data <button onClick={() => console.log('clean up')}>Clear</button>
     </div>
   )}
-  {status === "loading" && <div>Loading Data....</div>}
+  {status === "loading" && <div className="cssAcquaintances">Loading Data....</div>}
   {status === "success" && ( 
-      <div className="mealFinderContainer">
+      <div className="mealFinderContainer ">
         {data.meals && data.meals.length >= 1 &&
           data.meals.map((meal: any, mealIndex: number) => (
-            <div key={mealIndex}>
+            <div key={mealIndex} className="cssAcquaintances">
               <MealDetails meal={meal} />
             </div>
           ))} 
                  { data.meals == null && (
-         <div>Sorry no meals with {mealName} found!
+         <div className="cssAcquaintances boldFont">Sorry no meals with {mealName} found!
             </div>
           )} 
         </div>

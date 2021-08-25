@@ -3,12 +3,22 @@
 #MealTitle {
   text-align: center;
   font-size: 24px;
+  padding: 12px 0 0 0;
+  margin: 12px 0 0 0; 
+}
+
+.MealHeader {
+display: flex;
+flex-direction: column;
+align-self: center;
 }
 
 #MealFinder {
   background-color: $secondary-color;
   padding: 5px, 10px;
   margin: 4px;
+  display: flex;
+  flex-direction: column;
 }
 
 .button {
@@ -34,7 +44,7 @@
   margin: 5px;
   background-color: $light-color;
   color: $primary-color;
-  box-shadow: 3px 3px rgba($color: #000000, $alpha: 0.7);
+  box-shadow: 3px 4px 10px black ;
 }
 
 .mealPicture {
@@ -46,4 +56,8 @@
 
 .mealHeader {
   display: flex;
+}
+
+.boldFont {
+  font-weight: bold;
 }
