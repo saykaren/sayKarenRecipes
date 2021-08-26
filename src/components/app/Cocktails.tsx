@@ -2,19 +2,20 @@ import React, { useState } from "react";
 import { useQuery } from "react-query";
 import mealFinderAPI from "../Fetch/MealFinderAPI";
 import MealDetails from "./MealDetails";
+import CocktailDetails from "./CocktailDetails";
 
-export interface MealFinderProps {}
+export interface CocktailsProps {}
 
-const MealFinder = ({}: MealFinderProps) => {
-  const [mealName, setMealName] = useState("Arrabiat");
+const Cocktails = ({}: CocktailsProps) => {
+  const [drinksName, setDrinksName] = useState("margarita");
   const [searchTerm, setSearchTerm] = useState("");
   const [apiSearchType, setAPISearchType] = useState("search.php?s=");
   const { data, status } = useQuery(
     [
-      "meal",
-      "https://www.themealdb.com/api/json/v1/1/",
+      "cocktail",
+      "https://www.thecocktaildb.com/api/json/v1/1/",
       `${apiSearchType}`,
-      `${mealName}`,
+      `${drinksName}`,
     ],
     mealFinderAPI
   );
@@ -22,9 +23,9 @@ const MealFinder = ({}: MealFinderProps) => {
   const apiTypicalSearch = "search.php?s=";
   const apiRandomSearch = "random.php";
 
-  const updateSearch = (valueMeal: string, searchType: string) => {
-    const mealNameUpdate = valueMeal.replaceAll(" ", "_");
-    setMealName(mealNameUpdate);
+  const updateSearch = (valuedrinks: string, searchType: string) => {
+    const drinksNameUpdate = valuedrinks.replaceAll(" ", "_");
+    setDrinksName(drinksNameUpdate);
     setAPISearchType(searchType);
   };
 
@@ -35,7 +36,7 @@ const MealFinder = ({}: MealFinderProps) => {
 
   return (
     <div id="MealFinder">
-      <h3 id="MealTitle"> Meal Searcher</h3>
+      <h3 id="MealTitle"> Cocktail Searcher</h3>
       <div className="MealHeader">
         <input
           type="text"
@@ -56,7 +57,7 @@ const MealFinder = ({}: MealFinderProps) => {
             className="button"
             onClick={() => updateSearch("", apiRandomSearch)}
           >
-            Random Recipe!
+            Random Drink!
           </div>
         </section>
       </div>
@@ -73,16 +74,16 @@ const MealFinder = ({}: MealFinderProps) => {
       )}
       {status === "success" && (
         <div className="mealFinderContainer ">
-          {data.meals &&
-            data.meals.length >= 1 &&
-            data.meals.map((meal: any, mealIndex: number) => (
-              <div key={mealIndex} className="cssAcquaintances">
-                <MealDetails meal={meal} />
+          {data.drinks &&
+            data.drinks.length >= 1 &&
+            data.drinks.map((drinks: any, drinksIndex: number) => (
+              <div key={drinksIndex} className="cssAcquaintances">
+                <CocktailDetails drinks={drinks} />
               </div>
             ))}
-          {data.meals == null && (
+          {data.drinks == null && (
             <div className="cssAcquaintances boldFont">
-              Sorry no meals with {mealName} found!
+              Sorry no cocktails named {drinksName} found!
             </div>
           )}
         </div>
@@ -91,4 +92,4 @@ const MealFinder = ({}: MealFinderProps) => {
   );
 };
 
-export default MealFinder;
+export default Cocktails;

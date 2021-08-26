@@ -5,6 +5,7 @@ import "../styling/App.scss";
 import Footer from "./Footer";
 import RecipeSection from "./RecipeSection";
 import MealFinder from "./MealFinder";
+import Cocktails from "./Cocktails";
 
 const App = () => {
   const [ratingShow, setRatingShow] = useState(true);
@@ -31,8 +32,17 @@ const App = () => {
         >
           Meal Finder
         </div>
+        <div
+          className={
+            activeModule === "Cocktail" ? "appButton disable" : "appButton"
+          }
+          onClick={() => setActieModule("Cocktails")}
+        >
+          Cocktails
+        </div>
       </section>
       {activeModule === "Meal" && <MealFinder />}
+      {activeModule === "Cocktails" && <Cocktails />}
       {activeModule === "Recipe" && (
         <RecipeSection ratingShow={ratingShow} setRatingShow={setRatingShow} />
       )}
