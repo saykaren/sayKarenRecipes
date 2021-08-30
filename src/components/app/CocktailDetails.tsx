@@ -4,9 +4,7 @@ export interface CocktailDetailsProps {
   drinks: any;
 }
 
-const ingredientArray = [
-  1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 
-];
+const ingredientArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 const CocktailDetails = ({ drinks }: CocktailDetailsProps) => {
   return (
@@ -15,29 +13,18 @@ const CocktailDetails = ({ drinks }: CocktailDetailsProps) => {
         {drinks.strDrinkThumb && (
           <img
             src={drinks.strDrinkThumb}
-            alt="Drink picture"
+            alt={drinks.strImageAttribution}
             className="mealPicture cssBestFriends"
           />
         )}
-        {drinks.strMeal && (
-          <h3 className="cssBestFriends">Name: {drinks.strMeal}</h3>
+        {drinks.strDrink && (
+          <h3 className="cssBestFriends">Name: {drinks.strDrink}</h3>
         )}
       </div>
-      {drinks.strCategory && (
-        <div className="cssBestFriends">
-          <span className="boldFont">Category:</span> {drinks.strCategory}
-        </div>
-      )}
-      {drinks.strInstructions && (
-        <details className="cssBestFriends">
-          <summary className="cssBestFriends boldFont">Instructions:</summary>
-          {drinks.strInstructions}
-        </details>
-      )}
       <details className="cssBestFriends">
         <summary className="cssBestFriends boldFont">Ingredients</summary>
         {ingredientArray.map((numberArray, indexArray) => (
-          <div key={indexArray} >
+          <div key={indexArray}>
             {" "}
             {drinks[`strIngredient${numberArray}`] &&
               drinks[`strIngredient${numberArray}`].length > 0 &&
@@ -50,12 +37,15 @@ const CocktailDetails = ({ drinks }: CocktailDetailsProps) => {
           </div>
         ))}
       </details>
-      {drinks.strYoutube && (
+      {drinks.strInstructions && (
+        <details className="cssBestFriends">
+          <summary className="cssBestFriends boldFont">Instructions:</summary>
+          {drinks.strInstructions}
+        </details>
+      )}
+      {drinks.strCategory && (
         <div className="cssBestFriends">
-          <a href={drinks.strYoutube} target="_blank" rel="noopener noreferrer">
-            {" "}
-            YouTube Video
-          </a>
+          <span className="boldFont">Glass:</span> {drinks.strGlass}
         </div>
       )}
     </div>

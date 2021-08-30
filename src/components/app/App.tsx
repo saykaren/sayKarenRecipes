@@ -34,7 +34,7 @@ const App = () => {
         </div>
         <div
           className={
-            activeModule === "Cocktail" ? "appButton disable" : "appButton"
+            activeModule === "Cocktails" ? "appButton disable" : "appButton"
           }
           onClick={() => setActieModule("Cocktails")}
         >

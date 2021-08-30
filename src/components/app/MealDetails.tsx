@@ -28,16 +28,10 @@ const MealDetails = ({ meal }: MealDetailsProps) => {
           <span className="boldFont">Category:</span> {meal.strCategory}
         </div>
       )}
-      {meal.strInstructions && (
-        <details className="cssBestFriends">
-          <summary className="cssBestFriends boldFont">Instructions:</summary>
-          {meal.strInstructions}
-        </details>
-      )}
       <details className="cssBestFriends">
         <summary className="cssBestFriends boldFont">Ingredients</summary>
         {ingredientArray.map((numberArray, indexArray) => (
-          <div key={indexArray} >
+          <div key={indexArray}>
             {" "}
             {meal[`strIngredient${numberArray}`] &&
               meal[`strIngredient${numberArray}`].length > 0 &&
@@ -50,6 +44,12 @@ const MealDetails = ({ meal }: MealDetailsProps) => {
           </div>
         ))}
       </details>
+      {meal.strInstructions && (
+        <details className="cssBestFriends">
+          <summary className="cssBestFriends boldFont">Instructions:</summary>
+          {meal.strInstructions}
+        </details>
+      )}
       {meal.strYoutube && (
         <div className="cssBestFriends">
           <a href={meal.strYoutube} target="_blank" rel="noopener noreferrer">
