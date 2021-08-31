@@ -40,16 +40,7 @@ div.appButton.disable{
 }
 
 .App-header {
-  background-color: $secondary-color;
-  min-height: 10vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: calc(10px + 2vmin);
   color: white;
-  margin-right: -20px;
 }
 
 .App-link {
@@ -68,7 +59,7 @@ button {
 }
 
 #sayKaren {
-  height: 10vh;
+  height: 55px;
   padding-right: 20px;
   padding-top: 20px;
 }
