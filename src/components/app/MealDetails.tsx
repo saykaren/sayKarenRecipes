@@ -1,10 +1,13 @@
 import * as React from "react";
+import MealDataInterface, {
+  mealsInterface,
+} from "../Interface/MealDataInterface";
 
 export interface MealDetailsProps {
-  meal: any;
+  meal: mealsInterface;
 }
 
-const ingredientArray = [
+const ingredientArray: Array<number> = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
@@ -34,7 +37,6 @@ const MealDetails = ({ meal }: MealDetailsProps) => {
           <div key={indexArray}>
             {" "}
             {meal[`strIngredient${numberArray}`] &&
-              meal[`strIngredient${numberArray}`].length > 0 &&
               meal[`strIngredient${numberArray}`] !== "" && (
                 <li className="cssBestFriends">
                   {meal[`strIngredient${numberArray}`]}:{" "}
