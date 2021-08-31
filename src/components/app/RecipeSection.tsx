@@ -19,7 +19,7 @@ interface RecipeSectionProps {
 const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [data, setData] = useState<RecipeDataInterface[]>(RecipeData);
   const [loading, setLoading] = useState(false);
-  const [filteredWeek, setFilteredWeek] = useState(0);
+  const [filteredWeek, setFilteredWeek] = useState<number>(0);
   const [activeAllStatus, setActiveAllStatus] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -118,6 +118,9 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                 .toLocaleLowerCase()
                 .includes(searchTerm.toLocaleLowerCase())
             )
+          .filter((weekNumber)=>
+            filteredWeek > 0 ? weekNumber.week === filteredWeek : weekNumber
+        )       
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard cssFriends" key={`recipeCard${index}`}>
