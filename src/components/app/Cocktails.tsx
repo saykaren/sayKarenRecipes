@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
 import mealFinderAPI from "../Fetch/MealFinderAPI";
-import MealDetails from "./MealDetails";
 import CocktailDetails from "./CocktailDetails";
 
 export interface CocktailsProps {}
