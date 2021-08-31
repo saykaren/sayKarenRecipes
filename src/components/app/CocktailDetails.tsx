@@ -1,19 +1,23 @@
 import * as React from "react";
+import {
+  drinkInterface,
+} from "../Interface/CocktailDataInterface";
 
 export interface CocktailDetailsProps {
-  drinks: any;
+  drinks: drinkInterface;
 }
 
 const ingredientArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
 const CocktailDetails = ({ drinks }: CocktailDetailsProps) => {
+  console.log({ drinks });
   return (
     <div className="mealDetails cssFriends">
       <div className="mealHeader cssCloseFriends">
         {drinks.strDrinkThumb && (
           <img
             src={drinks.strDrinkThumb}
-            alt={drinks.strImageAttribution}
+            alt="drink"
             className="mealPicture cssBestFriends"
           />
         )}
@@ -27,7 +31,6 @@ const CocktailDetails = ({ drinks }: CocktailDetailsProps) => {
           <div key={indexArray}>
             {" "}
             {drinks[`strIngredient${numberArray}`] &&
-              drinks[`strIngredient${numberArray}`].length > 0 &&
               drinks[`strIngredient${numberArray}`] !== "" && (
                 <li className="cssBestFriends">
                   {drinks[`strIngredient${numberArray}`]}:{" "}
