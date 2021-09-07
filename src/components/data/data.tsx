@@ -1329,7 +1329,30 @@ export const RecipeData = [
     groceryList: false,
     calories: 383,
   },
-  // {
+  {
+    recipeTitle: 'Cobb Salad',
+    ingredients: [
+   { type: 'Red Leaf Lettuce', section: "Produce", amount: '1' },
+   { type: 'Bacon', section: "Meat", amount: '1/4 pack' },
+   { type: 'Avacado', section: "Produce", amount: '1' },
+   { type: 'Tomatoes', section: "Produce", amount: '1' },
+   { type: 'Hard Boiled Eggs', section: "Dairy", amount: '2' },
+   { type: 'Blue Cheese', section: "Dairy", amount: '1/8' },
+   { type: 'Ranch Dressing', section: "NonPerishables", amount: 'As needed' },
+  ],
+    preparationTime: 20,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [],
+    instructions: ['Boil Eggs - Boil water with vinegar. Once boiling add eggs to cook for 14 minutes. After timer goes place in ice water',
+  'Cook bacon', 'Mix ingredients. Enjoy!'
+  ],
+    active: false,
+    lillyRating: 2,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  },
+    // {
   //   recipeTitle: 'Template',
   //   ingredients: [
   //  { type: '??????', section: "NonPerishables", amount: '?????' },
