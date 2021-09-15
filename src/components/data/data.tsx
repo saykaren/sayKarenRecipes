@@ -221,6 +221,7 @@ export const RecipeData = [
     lillyRating: 2,
     groceryList: false,
     calories: 323,
+    goToLink: 'Stovetop Rice',
   },
   {
     recipeTitle: "Grandpa Garcia's Red Chile With Chicken",
@@ -386,6 +387,7 @@ export const RecipeData = [
     week: 4,
     lillyRating: 2,
     groceryList: false,
+    goToLink: 'Stovetop Rice'
   },
   {
     recipeTitle: "Chipotle Chicken Pasta",
@@ -1185,6 +1187,7 @@ export const RecipeData = [
     lillyRating: 3,
     week: 1,
     groceryList: false,
+    goToLink: 'Butter Chicken'
   },
   {
     recipeTitle: "Banana Bread Recipe",

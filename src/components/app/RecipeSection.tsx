@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import RecipeData from "../data/data";
 import RecipeDataInterface from "../Interface/RecipeDataInterface";
 import Lilly_Good from "../assests/Lilly_Good.jpg";
@@ -118,19 +118,27 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                 .toLocaleLowerCase()
                 .includes(searchTerm.toLocaleLowerCase())
             )
-          .filter((weekNumber)=>
-            filteredWeek > 0 ? weekNumber.week === filteredWeek : weekNumber
-        )       
+            .filter((weekNumber) =>
+              filteredWeek > 0 ? weekNumber.week === filteredWeek : weekNumber
+            )
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard cssFriends" key={`recipeCard${index}`}>
                 <div className="cssCloseFriends">
-                <img
-                  className="cssBestFriends"
-                  src={num.active ? toggleOn : toggleOff}
-                  onClick={() => updateState(num.recipeTitle, !num.active)}
-                />
-                {num && <h2 key={`recipeTitle${index}`} className="cssBestFriends">{num.recipeTitle}</h2>}
+                  <img
+                    className="cssBestFriends"
+                    src={num.active ? toggleOn : toggleOff}
+                    onClick={() => updateState(num.recipeTitle, !num.active)}
+                  />
+                  {num && (
+                    <h2
+                      key={`recipeTitle${index}`}
+                      className="cssBestFriends"
+                      id={num.recipeTitle}
+                    >
+                      {num.recipeTitle}
+                    </h2>
+                  )}
                 </div>
                 {num.active && (
                   <>
@@ -146,7 +154,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                               : Lilly_Okay
                           }
                           alt="rating"
-                      
                         />
                       )}
 
@@ -160,15 +167,14 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                         ))}
                     </div>
                     <div className={`instructions cssCloseFriends`}>
-                      <h3 className="cssBestFriends"
-                      >Instructions</h3>
+                      <h3 className="cssBestFriends">Instructions</h3>
                       {num.instructions.map((instr, indexInstru) => (
                         <div className="cssBestFriends">
                           <b>{indexInstru + 1}.</b> {instr}
                         </div>
                       ))}
                     </div>
-                    <div className="ingredients cssCloseFriends" >
+                    <div className="ingredients cssCloseFriends">
                       <b>Time:</b> {num.preparationTime}{" "}
                       {num.preparationMeasurement}
                     </div>
@@ -190,6 +196,14 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                         <div>
                           <b>Calories: </b>
                           {num.calories}
+                        </div>
+                      </div>
+                    )}
+                    {num.goToLink && (
+                      <div className={`instructions cssCloseFriends`}>
+                        <div onClick={() => setSearchTerm(`${num.goToLink}`)}>
+                          <b>Second Recipe Link: </b>
+                          {num.goToLink}
                         </div>
                       </div>
                     )}
