@@ -87,6 +87,17 @@ const Cocktails = ({}: CocktailsProps) => {
           )}
         </div>
       )}
+      <div>
+        Data from{" "}
+        <a
+          href="https://www.thecocktaildb.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          TheCocktailDB API
+        </a>{" "}
+      </div>
     </div>
   );
 };
