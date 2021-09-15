@@ -87,6 +87,17 @@ const MealFinder = ({}: MealFinderProps) => {
           )}
         </div>
       )}
+      <div>
+        Data from{" "}
+        <a
+          href="https://www.themealdb.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          TheMealDB API
+        </a>{" "}
+      </div>
     </div>
   );
 };
