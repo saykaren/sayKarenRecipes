@@ -921,6 +921,7 @@ export const RecipeData = [
     lillyRating: 1,
     week: 1,
     groceryList: false,
+    calories: 832,
   },
   {
     recipeTitle: "Spaghetti and Meatballs",
