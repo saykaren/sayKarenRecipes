@@ -1356,7 +1356,30 @@ export const RecipeData = [
   groceryList: false,
   calories: 0,
   },
-    // {
+    {
+    recipeTitle: 'Tumeric Turkey',
+    ingredients: [
+   { type: 'Olive oil', section: "NonPerishables", amount: '1 Tablespoon' },
+   { type: 'Ground Turkey', section: "Meat", amount: '1 lb' },
+   { type: 'Beef broth', section: "NonPerishables", amount: '1/2 cup' },
+   { type: 'Salt', section: "NonPerishables", amount: '1/2 Teaspoon' },
+   { type: 'Black Pepper', section: "NonPerishables", amount: '1/4 Teaspoon' },
+   { type: 'Cilantro', section: "Produce", amount: '2 Tablespoon' },
+   { type: 'Tumeric', section: "NonPerishables", amount: '2 Teaspoons' },
+   { type: 'Cayenne Pepper', section: "NonPerishables", amount: '1/4 Teaspoon' },
+   { type: 'Cumin', section: "NonPerishables", amount: '1/4 Teaspoon' },
+  ],
+    preparationTime: 30,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [],
+    instructions: ['Heat olive oil (1 Tbs) and ground turkey in skillet.', 'Once cooked add 1/4 cup broth, cilantro, salt (1/2 tsp), pepper (1/4 tsp), tumeric (2 tbs), cumin (1/4 tsp), and cayenne (1/4 tsp).', 'Cook for 4 minutes. Add remaining 1/4 cup beef broth and cook for another 4 minutes.' ],
+    active: false,
+    lillyRating: 2,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  },
+      // {
   //   recipeTitle: 'Template',
   //   ingredients: [
   //  { type: '??????', section: "NonPerishables", amount: '?????' },
