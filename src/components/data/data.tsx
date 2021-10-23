@@ -1379,7 +1379,26 @@ export const RecipeData = [
   groceryList: false,
   calories: 0,
   },
-      // {
+      {
+    recipeTitle: 'Ginger Lime Dressing',
+    ingredients: [
+   { type: 'Lime', section: "Produce", amount: 'Half' },
+   { type: 'Cilantro', section: "Produce", amount: '2 Tablespoons' },
+   { type: 'Salt', section: "NonPerishables", amount: 'Pinch' },
+   { type: 'Olive Oil', section: "NonPerishables", amount: '1/4 cup' },
+   { type: 'Ginger', section: "Produce", amount: '1 inch' },
+  ],
+    preparationTime: 10,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: ['Mason jar'],
+    instructions: ['Add all the ingredients to a mason jar and shake it vigorously until the dressing is well mixed',],
+    active: false,
+    lillyRating: 1,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  },
+        // {
   //   recipeTitle: 'Template',
   //   ingredients: [
   //  { type: '??????', section: "NonPerishables", amount: '?????' },
