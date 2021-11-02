@@ -1621,7 +1621,27 @@ export const RecipeData = [
     groceryList: false,
     calories: 0,
   },
-  // {
+  {
+    recipeTitle: 'Roasted Brussel Sprouts',
+    ingredients: [
+   { type: 'Brussels sprouts', section: "NonPerishables", amount: '1 1/2 lbs' },
+   { type: 'Olive oil', section: "NonPerishables", amount: '3 tablespoons' },
+  ],
+    preparationTime: 50,
+    preparationMeasurement: 'minutes',
+    requiredInstruments: [],
+    instructions: ['Preheat oven to 400 degrees F.',
+  'Cut off the brown ends of the Brussels sprouts and pull off any yellow outer leaves', 'Mix them in a bowl with the olive oil, salt and pepper.', 
+  'Pour them on a sheet pan and roast for 35 to 40 minutes, until crisp on the outside and tender on the inside.', 
+  'Shake the pan from time to time to brown the sprouts evenly.',
+  'Serve immediately.',],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  },
+    // {
   //   recipeTitle: 'Template',
   //   ingredients: [
   //  { type: '??????', section: "NonPerishables", amount: '?????' },
