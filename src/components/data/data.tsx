@@ -269,6 +269,7 @@ export const RecipeData = [
       { type: "Onion-yellow", section: "Produce", amount: "1/2" },
       { type: "Chicken-cubed", section: "Meat", amount: "1" },
       { type: "Sea Salt", section: "NonPerishables", amount: "1/2 Teaspoon" },
+      { type: "Garlic powder", section: "NonPerishables", amount: "1 Teaspoon" },
       {
         type: "Black Pepper",
         section: "NonPerishables",
