@@ -224,7 +224,7 @@ export const RecipeData = [
     goToLink: "Stovetop Rice",
   },
   {
-    recipeTitle: "Grandpa Garcia's Red Chile With Chicken",
+    recipeTitle: "Grandpa Garcia's Red Chile With Tamales",
     ingredients: [
       { type: "Roasted Chicken", section: "Meat", amount: "1" },
       {
@@ -261,6 +261,7 @@ export const RecipeData = [
     week: 3,
     lillyRating: 1,
     groceryList: false,
+    calories: 860,
   },
   {
     recipeTitle: "Chicken Bacon Ranch Wraps",
