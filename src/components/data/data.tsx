@@ -1497,7 +1497,7 @@ export const RecipeData = [
     lillyRating: 3,
     week: 1,
     groceryList: false,
-    calories: 0,
+    calories: 299,
   },
   {
     recipeTitle: "Loaded Baked Potatoes",
