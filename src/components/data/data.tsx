@@ -1598,6 +1598,7 @@ export const RecipeData = [
     preparationMeasurement: "hours",
     requiredInstruments: ['Food processor or ninja'],
     instructions: [
+      "Cook Millet, similar to rice",
       "Preheat oven to 425 F",
       "Line a baking sheet with parchment paper",
       "In nonstick skillet, heat 2 tbs of olive oil over medium heat",
