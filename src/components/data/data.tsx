@@ -1844,6 +1844,44 @@ export const RecipeData = [
     groceryList: false,
     calories: 0,
   },
+  {
+    recipeTitle: "Watergate Salad Recipe",
+    ingredients: [
+      {
+        type: "Pistachio pudding mix - instant",
+        section: "NonPerishables",
+        amount: "1 package",
+      },
+      {
+        type: "Pineapple crushed - can",
+        section: "NonPerishables",
+        amount: "8oz can",
+      },
+      {
+        type: "Marshmallows-minature",
+        section: "NonPerishables",
+        amount: "1 cup",
+      },
+      {
+        type: "Whipped topping - frozen",
+        section: "Frozen",
+        amount: "8oz container",
+      },
+    ],
+    preparationTime: 3,
+    preparationMeasurement: "hours",
+    requiredInstruments: [],
+    instructions: [
+      "In large bowl, mix together pudding mix, pineapple with juice, and marshmallows",
+      "Fold in whipped topping",
+      "Chill in refridgerator at least a few hours",
+    ],
+    active: false,
+    lillyRating: 2,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
