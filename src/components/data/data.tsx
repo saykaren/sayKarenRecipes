@@ -1882,6 +1882,45 @@ export const RecipeData = [
     groceryList: false,
     calories: 0,
   },
+  {
+    recipeTitle: "Cranberry-Glazed Pork Tenderloin",
+    ingredients: [
+      { type: "Cranberry juice", section: "NonPerishables", amount: "1 cup" },
+      {
+        type: "Red Currant Jelly",
+        section: "NonPerishables",
+        amount: "1/3 cup",
+      },
+      { type: "Dijon mustard", section: "NonPerishables", amount: "1 tbs" },
+      {
+        type: "Cranberries -dried",
+        section: "NonPerishables",
+        amount: "1/4 cup",
+      },
+      { type: "Pork tenderloin", section: "NonPerishables", amount: "1 lbs" },
+      { type: "Olive Oil", section: "NonPerishables", amount: "1 tbs" },
+    ],
+    preparationTime: 40,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: [""],
+    instructions: [
+      "Preheat oven to 425.",
+      "Line a rimmed baking sheet with foil",
+      "Combine the cranberry juice, jelly and mustard in a medium skillet over medium-high heat; cook, stirring occasionally until thick enough to coat the back of a spoon, about 15 minutes",
+      "Remove 3 tbs of the glaze and set aside for brushing",
+      "Stir the cranberries into the remaining glaze; set aside for drizzling",
+      "Meanwhile, rub the pork with olive oil (1 tbs), salt (1/2 tsp) and a few grinds of pepper",
+      "Place on the prepared baking sheet and roast, turing once, 15 minutes",
+      "Remove the pork from the oven and brush all over with the reserved glaze (3 tbs)",
+      "Continue to roast until the thermometer inserted into the thickest part of the meat registers 145 degrees, 5-10 minutes more.",
+      "Let rest 5 minutes, then slice and drizzle with the cranberry glaze"
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
