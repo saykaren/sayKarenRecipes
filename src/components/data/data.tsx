@@ -1922,7 +1922,8 @@ export const RecipeData = [
     calories: 0,
   },
   {
-    recipeTitle: "Great Great Great Grandma Gerties Pancakes and Waffles from Aunt Pam",
+    recipeTitle:
+      "Great Great Great Grandma Gerties Pancakes and Waffles from Aunt Pam",
     ingredients: [
       { type: "Flour", section: "NonPerishables", amount: "2 1/2 cups" },
       { type: "Baking Powder", section: "NonPerishables", amount: "1 tsp" },
@@ -1950,7 +1951,33 @@ export const RecipeData = [
       "Batter will be lumpy & thick",
       "Now add buttermilk (2 1/2 cups) a little at a time",
       "When mixed well: add oil. Waffles=4 tbs or Pancakes=2 tbs",
-      "2 minutes in Mickey Waffle maker"
+      "2 minutes in Mickey Waffle maker",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
+  {
+    recipeTitle: "Dad's Meatloaf",
+    ingredients: [
+      { type: "Onion", section: "Produce", amount: "1/2 diced medium size" },
+      { type: "Celery", section: "Produce", amount: "2 stalks" },
+      { type: "Ground Turkey - Jennie-O", section: "Meat", amount: "1 lb" },
+      { type: "Chorizo - Johnsonville", section: "Meat", amount: "1 lb" },
+      { type: "Egg", section: "Dairy", amount: "1" },
+    ],
+    preparationTime: 1,
+    preparationMeasurement: "hours",
+    requiredInstruments: ["Oven"],
+    instructions: [
+      "Preheat oven to 350",
+      "Mix the ingredients in a mixing bowl",
+      "Place in glass meatloaf pan and cook at 350 degrees for 1 hour",
+      "Internal temp should reach 165 degrees.",
+      "Let rest for 10 minutes and then cut",
+      "Alternatives - Include bread crumbs in mix but soak in milk first to add moisture. For toppings you can bake ketchup or cheese on the top before you remove from the oven",
     ],
     active: false,
     lillyRating: 3,
