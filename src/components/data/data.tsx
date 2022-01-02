@@ -2016,6 +2016,52 @@ export const RecipeData = [
     groceryList: false,
     calories: 0,
   },
+  {
+    recipeTitle: "Green Wrap with Hummus",
+    ingredients: [
+      {
+        type: "Chickpeas",
+        section: "NonPerishables",
+        amount: "1 carton - 4/5 lb (380 gram)",
+      },
+      { type: "Olive oil", section: "NonPerishables", amount: "3 tbs" },
+      {
+        type: "Garlic oil - concentrated",
+        section: "NonPerishables",
+        amount: "2 tsp",
+      },
+      {
+        type: "Tahini - sesame seed paste",
+        section: "NonPerishables",
+        amount: "2 tbs",
+      },
+      { type: "Lemon juice", section: "NonPerishables", amount: "1/2 tbs" },
+      { type: "Cumin - ground", section: "NonPerishables", amount: "1 tsp" },
+      { type: "Spinach", section: "Produce", amount: "2 1/2 oz" },
+      { type: "Broccoli", section: "Produce", amount: "4 2/5 oz" },
+      {
+        type: "Tortillas or Romaine lettuce",
+        section: "Produce",
+        amount: "2 each",
+      },
+      { type: "Sharp Cheese", section: "Dairy", amount: "Few slices" },
+    ],
+    preparationTime: 30,
+    preparationMeasurement: "minutes",
+    requiredInstruments: [],
+    instructions: [
+      "Drain and rinse the chickpeas and mix them together with the olive oil (3 tbs)",
+      "Add garlic oil (2 tsp), tahini (2 tbs), lemon juice (1/2 tbs), and cumin (1 tsp)",
+      "Season to taste with salt and pepper",
+      "Rince the spinach and broccoli. Cut broccoli into small pieces",
+      "Place the spinach, broccoli, and hummus on the tortilla (or Romaine lettuce). Top with a few slices of sharp cheese",
+    ],
+    active: false,
+    lillyRating: 1,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
