@@ -2100,6 +2100,57 @@ export const RecipeData = [
     groceryList: false,
     calories: 0,
   },
+  {
+    recipeTitle: "Taco Seasoning",
+    ingredients: [
+      { type: "??????", section: "NonPerishables", amount: "?????" },
+
+      {
+        type: "chili powder",
+        section: "NonPerishables",
+        amount: " 1 tablespoon",
+      },
+      {
+        type: "garlic powder",
+        section: "NonPerishables",
+        amount: "¼ teaspoon",
+      },
+      {
+        type: "onion powder",
+        section: "NonPerishables",
+        amount: "¼ teaspoon ",
+      },
+      {
+        type: "crushed red pepper flakes",
+        section: "NonPerishables",
+        amount: "¼ teaspoon",
+      },
+      {
+        type: "dried oregano",
+        section: "NonPerishables",
+        amount: "¼ teaspoon",
+      },
+      { type: "paprika", section: "NonPerishables", amount: "½ teaspoon" },
+      {
+        type: "ground cumin",
+        section: "NonPerishables",
+        amount: "1 ½ teaspoons",
+      },
+      { type: "sea salt", section: "NonPerishables", amount: "1 teaspoon" },
+      { type: "black pepper", section: "NonPerishables", amount: "1 teaspoon" },
+    ],
+    preparationTime: 5,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: [""],
+    instructions: [
+      "In a small bowl, mix together chili powder, garlic powder, onion powder, red pepper flakes, oregano, paprika, cumin, salt and pepper. Store in an airtight container.",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
