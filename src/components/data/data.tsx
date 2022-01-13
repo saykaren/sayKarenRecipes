@@ -1071,6 +1071,8 @@ export const RecipeData = [
       { type: "cucumber", section: "Produce", amount: "1 small" },
       { type: "avocado", section: "Produce", amount: "1" },
       { type: "rice vinegar", section: "NonPerishables", amount: "1/4 cup" },
+      { type: "Ginger", section: "NonPerishables", amount: "Never have enough" },
+      { type: "Soy Sauce", section: "NonPerishables", amount: "Never have enough" },
     ],
     preparationTime: 40,
     preparationMeasurement: "minutes",
@@ -2134,7 +2136,7 @@ export const RecipeData = [
       {
         type: "ground cumin",
         section: "NonPerishables",
-        amount: "1 ½ teaspoons",
+        amount: "1 ½ teaspoons",
       },
       { type: "sea salt", section: "NonPerishables", amount: "1 teaspoon" },
       { type: "black pepper", section: "NonPerishables", amount: "1 teaspoon" },
