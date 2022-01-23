@@ -2394,6 +2394,81 @@ export const RecipeData = [
     groceryList: false,
     calories: 471,
   },
+  {
+    recipeTitle: "Instant Pot Japanese Steakhouse Onion Soup",
+    ingredients: [
+      {
+        amount: "1 tablespoon",
+        type: "sesame oil (any kind)",
+        section: "NonPerishables",
+      },
+      {
+        amount: "1 medium (or 2 small)",
+        type: "yellow onions, quartered into wedges",
+        section: "Produce",
+      },
+      {
+        amount: "3 cloves",
+        type: "garlic, crushed or smashed",
+        section: "Produce",
+      },
+      {
+        amount: "1 large",
+        type: "carrot, peeled and cut into large chunks",
+        section: "Produce",
+      },
+      {
+        amount: "2-3-inch piece",
+        type: "ginger, peeled and cut into chunks",
+        section: "Produce",
+      },
+      {
+        amount: "2 cups",
+        type: "low-sodium vegetable broth (or Onion or Garlic broth) ",
+        section: "NonPerishables",
+      },
+      {
+        amount: "2 cups",
+        type: "low-sodium chicken broth",
+        section: "NonPerishables",
+      },
+      {
+        amount: "2 cups",
+        type: "low-sodium beef broth",
+        section: "NonPerishables",
+      },
+      {
+        amount: "1-2 teaspoons",
+        type: "seasoned salt (add more or less to taste if desired)",
+        section: "NonPerishables",
+      },
+      { amount: "1 teaspoon", type: "onion powder", section: "NonPerishables" },
+      { amount: "1 bunch", type: "scallions", section: "NonPerishables" },
+      { amount: "2-4 ounces", type: "onion", section: "Produce" },
+      {
+        amount: "As needed",
+        type: "Frenches fried onions",
+        section: "NonPerishables",
+      },
+    ],
+    preparationTime: 0,
+    preparationMeasurement: "hours",
+    requiredInstruments: ["instant pot"],
+    instructions: [
+      "Add the sesame oil to the Instant Pot and hit Sauté so it's on the More or High setting.",
+      "After 3 minutes of heating, add the onion, garlic, ginger and carrot and sauté for 8-10 minutes until the onion and garlic are nicely browned and just slightly charred on the edges.",
+      "Use a mixing spoon to transfer the sautéed veggies to a steamer basket and lower it into the pot.",
+      "Pour the broths in the pot, secure the lid and hit Manual or Pressure Cook at High Pressure for 15 minutes. Quick release when done.",
+      "Remove the steamer basket with the veggies from the broth and discard.",
+      "Stir the onion powder and seasoned salt into the broth and add more or less to taste (the salt flavor comes out more as it cools).",
+      "Ladle into bowls and top with the sliced mushrooms, scallions and some fried onions, if desired. Goes GREAT as a starter for my Chicken Terikayi!",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
