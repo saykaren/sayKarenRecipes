@@ -2341,13 +2341,13 @@ export const RecipeData = [
   {
     recipeTitle: "Classic Beef Meatloaf",
     ingredients: [
-      { amount: "1 cups", type: "whole milk", section: "NonPerishables" },
+      { amount: "1 cups", type: "whole milk", section: "Dairy" },
       { amount: "1 cups", type: "bread crumbs", section: "NonPerishables" },
-      { amount: "1 large ", type: "eggs", section: "NonPerishables" },
+      { amount: "1 large ", type: "eggs", section: "Dairy" },
       {
         amount: "1/2 ",
         type: "yellow onion , minced",
-        section: "NonPerishables",
+        section: "Produce",
       },
       {
         amount: "1/2 teaspoon ",
@@ -2363,7 +2363,7 @@ export const RecipeData = [
       {
         amount: "1 1/2 pounds",
         type: "ground beef , (85/15)",
-        section: "NonPerishables",
+        section: "Meat",
       },
       { amount: "1/4 cup ", type: "ketchup", section: "NonPerishables" },
       {
@@ -2463,6 +2463,38 @@ export const RecipeData = [
       "Stir the onion powder and seasoned salt into the broth and add more or less to taste (the salt flavor comes out more as it cools).",
       "Ladle into bowls and top with the sliced mushrooms, scallions and some fried onions, if desired. Goes GREAT as a starter for my Chicken Terikayi!",
     ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+  },
+  {
+    recipeTitle: "Mediterranean Chopped Salad",
+    ingredients: [
+      {
+        amount: "6-8 baby (or 2 large Cucumbers)",
+        type: "Cucumber",
+        section: "NonPerishables",
+      },
+      { amount: "4", type: " Roma Tomatoes", section: "NonPerishables" },
+      { amount: "1 small", type: "Red Onion", section: "NonPerishables" },
+      {
+        amount: "1/4 cup",
+        type: "Kalamata Olives (optional)",
+        section: "NonPerishables",
+      },
+      { amount: "2", type: "Lemons", section: "NonPerishables" },
+      { amount: "1/4 cup", type: "Olive Oil", section: "NonPerishables" },
+      { amount: "1 teaspoon", type: "Salt", section: "NonPerishables" },
+    ],
+    preparationTime: 0,
+    preparationMeasurement: "hours",
+    requiredInstruments: [],
+    instructions: ["Wash and chop all salad ingredients as small as you would like (no worries if you keep larger for your sanity). Place in a large bowl.",
+    "Squeeze the juice of 2 lemons over the chopped veggies.",
+    "Add in the olive oil and salt. You can add more salt if you prefer for taste.",
+    "Mix well and enjoy!"],
     active: false,
     lillyRating: 3,
     week: 1,
