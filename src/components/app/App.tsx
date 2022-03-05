@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { QueryClient, QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
-import "../styling/App.scss";
+import "../styling/App.css";
 import Footer from "./Footer";
 import RecipeSection from "./RecipeSection";
 import MealFinder from "./MealFinder";

@@ -1,10 +1,10 @@
-@import './variables.scss';
+
 
 #footer{
   width: 100%;
   height: auto;
   word-wrap: break-word;
-  color: $secondary-color;
+  color: var(--secondary-color);
   text-align: center;
   font-size: 1.5rem;
   bottom: 0;
