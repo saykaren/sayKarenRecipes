@@ -2614,7 +2614,37 @@ export const RecipeData = [
     groceryList: false,
     calories: 0,
   },
-  // {
+  {
+    recipeTitle: 'Cream Corn',
+    ingredients: [
+      {amount: '1 medium', type: ' onion', section: "NonPerishables"},
+      {amount: '2 medium', type: 'red potatoes ', section: "NonPerishables"},
+      {amount: '2 Tbsp', type: ' butter ', section: "NonPerishables"},
+      {amount: '1 cup', type: ' water ', section: "NonPerishables"},
+      {amount: '42 cups', type: ' whole-kernel corn ', section: "NonPerishables"},
+      {amount: '1½ cups', type: ' creamed corn ', section: "NonPerishables"},
+      {amount: '1½ cups', type: ' milk ', section: "NonPerishables"},
+      {amount: '½ tsp', type: ' salt Dash of pepper ', section: "NonPerishables"},
+      {amount: '5 Tbsp', type: ' bacon bits', section: "NonPerishables"},
+      
+  ],
+    preparationTime: 50,
+    preparationMeasurement: 'minutes',
+    requiredInstruments: [''],
+    instructions: ['Peel off the onion\'s hard outer layer, and cut the onion into 1/2-inch pieces. ',
+    'Then chop the red potatoes into bite-size cubes. Set the onion and potatoes aside.',
+    'Melt the butter in a heavy saucepan over medium-low heat. Cook the onion in the melted butter until the onion starts to turn clear (about 3 or 4 minutes).',
+    'Add the potatoes and water, then cover the pan and let simmer for 15 minutes.',
+    'Stir in the whole-kernel corn, creamed corn, milk, salt, and pepper. ',
+    'Continue cooking and stirring the chowder until it heats through (about 7 minutes). ',
+    'Ladle the chowder into bowls, sprinkle bacon bits on top, and serve.'],
+    active: false,
+    lillyRating: 2,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  },
+    // {
   //   recipeTitle: 'Template',
   //   ingredients: [
   //  { type: '??????', section: "NonPerishables", amount: '?????' },
