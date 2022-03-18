@@ -17,6 +17,8 @@ export interface RecipeDataInterface {
   calories?: number;
   goToLink?: string;
   linkItHere?: string;
+  resource?: string;
+  resourceLink?: string;
 }
 
 export default RecipeDataInterface;

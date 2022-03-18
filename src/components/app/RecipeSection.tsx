@@ -209,6 +209,19 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                     )}
                   </>
                 )}
+                {num.resource && num.resourceLink && (
+                  <div>
+                    <b>Resource: </b>
+                    <a
+                      href={num.resourceLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {" "}
+                      {num.resource}
+                    </a>
+                  </div>
+                )}
                 {num.groceryList ? (
                   <div onClick={() => updateGrocery(index)}>
                     <img src={basket} alt="Added" />
