@@ -209,17 +209,21 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                     )}
                   </>
                 )}
-                {num.resource && num.resourceLink && (
+                {num.resource && (
                   <div>
                     <b>Resource: </b>
-                    <a
-                      href={num.resourceLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {" "}
-                      {num.resource}
-                    </a>
+                    {num.resourceLink ? (
+                      <a
+                        href={num.resourceLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {" "}
+                        {num.resource}
+                      </a>
+                    ) : (
+                      <span>{num.resource}</span>
+                    )}
                   </div>
                 )}
                 {num.groceryList ? (
