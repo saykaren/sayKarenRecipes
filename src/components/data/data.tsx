@@ -1232,6 +1232,7 @@ export const RecipeData = [
     lillyRating: 3,
     week: 1,
     groceryList: false,
+    resource: "Omie",
   },
   {
     recipeTitle: "Mollys Guacamole",
@@ -2585,7 +2586,11 @@ export const RecipeData = [
         type: "dry Marsala wine",
         section: "NonPerishables",
       },
-      { amount: "2/3 cup", type: "heavy cream", section: "NonPerishables" },
+      {
+        amount: "2/3 cup",
+        type: "Coconut milk (KAREN) or heavy cream",
+        section: "NonPerishables",
+      },
       {
         amount: "2 tsp",
         type: "chopped fresh thyme",
@@ -2601,6 +2606,8 @@ export const RecipeData = [
     preparationMeasurement: "Minutes",
     requiredInstruments: ["Crock-Pot"],
     instructions: [
+      "Prepare chicken breasts: first cut them horizontally to form then pound them to an even 1/4 inch thickness",
+      "If you pound large chicken breasts without first halving them, they’ll be huge. Of course, you could also pound them thin first and then cut them in half vertically; the only drawback is that they’ll lose their natural shape (which, admittedly, is not a big deal!).",
       "Place the flour, 3/4 teaspoon salt, and 1/4 teaspoon pepper in a ziplock bag.",
       "Add the chicken to the bag; seal bag tightly and shake to coat chicken evenly. Set aside. ",
       "Heat the oil and 2 tablespoons of the butter in a large skillet over medium-high heat. ",
@@ -2614,8 +2621,6 @@ export const RecipeData = [
       "Add the chicken back to the pan, along with any juices that accumulated on the plate. ",
       "Reduce the heat to low and simmer until the chicken is warmed through and the sauce thickens a bit more, 2 to 3 minutes. ",
       "Sprinkle with parsley, if using, and serve.",
-      "Note: If your chicken breasts are large (like the ones in the photos that are about 3/4 lb. each), it’s best to first cut them horizontally to form four flat fillets, then pound them to an even 1/4-inch thickness. ",
-      "If you pound large chicken breasts without first halving them, they’ll be huge. Of course, you could also pound them thin first and then cut them in half vertically; the only drawback is that they’ll lose their natural shape (which, admittedly, is not a big deal!).",
     ],
     active: false,
     lillyRating: 3,
