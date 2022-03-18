@@ -262,6 +262,7 @@ export const RecipeData = [
     lillyRating: 1,
     groceryList: false,
     calories: 860,
+    resource: "Grandpa Garcia",
   },
   {
     recipeTitle: "Chicken Bacon Ranch Wraps",
@@ -475,6 +476,7 @@ export const RecipeData = [
     week: 3,
     lillyRating: 1,
     groceryList: false,
+    resource: "Grandpa Garcia",
   },
   {
     recipeTitle: "Grandpa Saylor's Famous Chili Recipe",
@@ -528,6 +530,7 @@ export const RecipeData = [
     lillyRating: 2,
     week: 4,
     groceryList: false,
+    resource: "Grandpa Saylor",
   },
   {
     recipeTitle: "Chicken Alfredo",
@@ -1236,7 +1239,7 @@ export const RecipeData = [
       { type: "Avacados", section: "Produce", amount: "2" },
       { type: "Garlic", section: "Produce", amount: "2 Tbs" },
       { type: "Jalepenos", section: "Produce", amount: "2 Tbs" },
-      { type: "Salt", section: "NonPerishables", amount: "2 Tsp" },
+      { type: "Salt", section: "NonPerishables", amount: "VERY LITTLE" },
       { type: "Tomatoes", section: "Produce", amount: "2 Tbs" },
       { type: "Onion", section: "Produce", amount: "2 Tbs" },
       { type: "Orange", section: "Produce", amount: "slice" },
@@ -1251,6 +1254,7 @@ export const RecipeData = [
     lillyRating: 2,
     week: 1,
     groceryList: false,
+    resource: "Molly",
   },
   {
     recipeTitle: "Chicken Enchiladas",
@@ -1348,6 +1352,7 @@ export const RecipeData = [
     week: 1,
     groceryList: false,
     calories: 383,
+    resource: "Aaron Garcia",
   },
   {
     recipeTitle: "Cobb Salad",
@@ -1917,6 +1922,7 @@ export const RecipeData = [
     week: 1,
     groceryList: false,
     calories: 0,
+    resource: "Pam Dougherty",
   },
   {
     recipeTitle: "Dad's Meatloaf",
@@ -1943,6 +1949,7 @@ export const RecipeData = [
     week: 1,
     groceryList: false,
     calories: 0,
+    resource: "Rick Saylor",
   },
   {
     recipeTitle: "Creamy Pesto Pasta with Chicken and Broccoli",
@@ -2951,6 +2958,68 @@ export const RecipeData = [
     calories: 0,
     resource: "Half Baked Havest",
     resourceLink: "https://www.halfbakedharvest.com/orange-sesame-chicken/",
+  },
+  {
+    recipeTitle: "Red Curry Basil Garlic Oil Noodles",
+    ingredients: [
+      {
+        amount: "1/2 cup",
+        type: "sesame or peanut oil",
+        section: "NonPerishables",
+      },
+      {
+        amount: "1/3 cup",
+        type: "green onions, sliced",
+        section: "NonPerishables",
+      },
+      {
+        amount: "1-3 tbs",
+        type: "Thai red curry paste",
+        section: "NonPerishables",
+      },
+      { amount: "3-4 cloves", type: "garlic", section: "NonPerishables" },
+      { amount: "1 tbs", type: "ginger", section: "NonPerishables" },
+      {
+        amount: "to taste",
+        type: "crushed red pepper flakes",
+        section: "NonPerishables",
+      },
+      {
+        amount: "1/2 cup",
+        type: "fresh Thai or regular basil",
+        section: "NonPerishables",
+      },
+      { amount: "1/4 cup", type: "fresh cilantro", section: "NonPerishables" },
+      {
+        amount: "4 squares",
+        type: "brown rice ramen noodles, or 6 ounces rice noodles",
+        section: "NonPerishables",
+      },
+      { amount: "1/3 cup", type: "soy sauce", section: "NonPerishables" },
+    ],
+    preparationTime: 20,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: [""],
+    instructions: [
+      "Put pot of water on stove to boil for noodles",
+      "Prepare ginger & garlic: grate it",
+      "Prepare thai or baisl: chop it",
+      "Prepare cilantro: chop it",
+      "In a skillet, cook the sesame oil and green onions over medium heat until very fragrant, 3-5 minutes.",
+      "Lower the heat, stir in the red curry paste, cook 2 minutes.",
+      "In a large bowl, mix the garlic (3-4 cloves), ginger (1 tbs), basil (1/2 cup), cilantro (1/4 cup), and season with chili flakes (to taste).",
+      "Pour the hot oil over the herbs.",
+      "Cook the noodles according to package directions, then drain.",
+      "Toss the warm noodles and tamari/soy sauce with the oil.",
+      "Serve the noodles with additional green onions",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+    resource: "Half Baked Harvest",
+    resourceLink: "https://www.halfbakedharvest.com/basil-garlic-oil-noodles/",
   },
   // {
   //   recipeTitle: 'Template',
