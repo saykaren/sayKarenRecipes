@@ -3093,6 +3093,46 @@ export const RecipeData = [
     // resource: "Baked by Melissa",
     // resourceLink: "https://www.bakedbymelissa.com/blog/green-goddess-salad",
   },
+  {
+    recipeTitle: "Raspberry Vinaigrette",
+    ingredients: [
+      {
+        amount: "2 tbs",
+        type: "seedless raspberry jam",
+        section: "NonPerishables",
+      },
+      {
+        amount: "2½ tsp",
+        type: " red wine vinegar",
+        section: "NonPerishables",
+      },
+      { amount: "1 tsp", type: "Dijon mustard", section: "NonPerishables" },
+      { amount: "½ tsp", type: "table salt", section: "NonPerishables" },
+      { amount: "½ tsp", type: "pepper", section: "NonPerishables" },
+      {
+        amount: "3 tbs",
+        type: " extra-virgin olive oil",
+        section: "NonPerishables",
+      },
+    ],
+    preparationTime: 5,
+    preparationMeasurement: "minutes",
+    requiredInstruments: [""],
+    instructions: [
+      "This recipe works nicely for a slightly sweet vinaigrette. It pairs well with salads topped with berries or other fruit. Avoid chunky preserves and supersweet jams.",
+      "Whisk jam in medium bowl until smooth.",
+      "Add vinegar (3tbs), mustard (1 tsp), salt (1/2 tsp), and pepper (1/2 tsp), whisking until combined.",
+      "Whisking constantly, slowly drizzle in oil until emulsified.",
+      "Vinaigrette can be refrigerated for up to 3 days; whisk to recombine before using.",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+    // resource: "Baked by Melissa",
+    // resourceLink: "https://www.bakedbymelissa.com/blog/green-goddess-salad",
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
