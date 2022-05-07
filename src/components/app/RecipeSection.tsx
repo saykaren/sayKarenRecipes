@@ -21,7 +21,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [loading, setLoading] = useState(false);
   const [filteredWeek, setFilteredWeek] = useState<number>(0);
   const [activeAllStatus, setActiveAllStatus] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [searchTerm, setSearchTerm] = useState<string>("");
 
   useEffect(() => {
     setLoading(false);
@@ -205,6 +205,14 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                           <b>Second Recipe Link: </b>
                           {num.goToLink}
                         </div>
+                      </div>
+                    )}
+                    {num.otherRecipeLink && (
+                      <div
+                        onClick={() => setSearchTerm(`${num.otherRecipeLink}`)}
+                      >
+                          <b>Third Recipe Link: </b>
+                        {num.otherRecipeLink}
                       </div>
                     )}
                   </>
