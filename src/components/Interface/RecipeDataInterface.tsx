@@ -19,6 +19,8 @@ export interface RecipeDataInterface {
   linkItHere?: string;
   resource?: string;
   resourceLink?: string;
+  otherRecipeLink?: string;
+  otherRecipeLink2?: string;
 }
 
 export default RecipeDataInterface;
