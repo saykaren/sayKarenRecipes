@@ -3382,6 +3382,73 @@ export const RecipeData = [
     goToLink: "",
     otherRecipeLink: "",
   },
+  {
+    recipeTitle: "Grilled Vegetable Kabobs - zuchinni",
+    ingredients: [
+      {
+        amount: " 1",
+        type: "yellow squash or zucchini, cut into half moons",
+        section: "NonPerishables",
+      },
+      {
+        amount: " 8 ounces",
+        type: "baby bella mushrooms, trimmed",
+        section: "NonPerishables",
+      },
+      { amount: " 1 cup", type: "grape tomatoes", section: "NonPerishables" },
+      {
+        amount: " 6 ounces",
+        type: " brussels sprouts, halved, (it helps to microwave the brussels briefly so they are a bit softer and will go through the skewers more easily)",
+        section: "NonPerishables",
+      },
+      {
+        amount: " 1 medium",
+        type: "onion, cut into chunks",
+        section: "NonPerishables",
+      },
+      {
+        amount: " 3-4",
+        type: " garlic cloves, minced",
+        section: "NonPerishables",
+      },
+      {
+        amount: " ½ cup",
+        type: "chopped fresh parsley",
+        section: "NonPerishables",
+      },
+      { amount: "as needed", type: " kosher salt", section: "NonPerishables" },
+      { amount: " ½ tsp", type: " dried oregano", section: "NonPerishables" },
+      {
+        amount: " ½ tsp",
+        type: " Aleppo pepper (or ½ to 1 teaspoon red pepperflakes)",
+        section: "NonPerishables",
+      },
+      {
+        amount: " ⅓ cup",
+        type: "extra virgin olive oil",
+        section: "NonPerishables",
+      },
+      { amount: "2", type: "Lemons", section: "NonPerishables" },
+    ],
+    preparationTime: 30,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: [""],
+    instructions: [
+      "Prepare 8 to 10 skewers (if using bamboo or wooden skewers, soak them in water for at least 30 minutes).",
+      "Chop the vegetables and garlic and place them in a large mixing bowl.",
+      "Add the parsley and season with Kosher salt, oregano and pepper flakes. Add the olive oil and lemon juice. Toss to combine.",
+      "Set the vegetables aside for 20 minutes while you heat the grill (Or you can marinate them in the fridge for a few hours until you are ready).",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+    resource: "The Mediterranean Dish",
+    resourceLink: "https://www.themediterraneandish.com/vegetable-kabobs/#recipe",
+    goToLink: "",
+    otherRecipeLink: "",
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
