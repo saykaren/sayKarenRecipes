@@ -3326,6 +3326,62 @@ export const RecipeData = [
     goToLink: "",
     otherRecipeLink: "",
   },
+  {
+    recipeTitle: "Mediterranean-Style Grilled Zucchini Salad",
+    ingredients: [
+      {
+        amount: "4",
+        type: "zucchini squash about 2 lb, sliced into rounds",
+        section: "NonPerishables",
+      },
+      {
+        amount: "As much as needed",
+        type: "Extra Virgin Olive Oil",
+        section: "NonPerishables",
+      },
+      { amount: "1 tsp", type: "cumin", section: "NonPerishables" },
+      { amount: "1", type: "lemon", section: "NonPerishables" },
+      { amount: "1", type: "garlic clove minced", section: "NonPerishables" },
+      {
+        amount: "As needed",
+        type: "Salt and pepper",
+        section: "NonPerishables",
+      },
+      { amount: "1 cup", type: "fresh parsley", section: "NonPerishables" },
+      {
+        amount: "2 tsp",
+        type: "chopped fresh tarragon",
+        section: "NonPerishables",
+      },
+      {
+        amount: "As needed",
+        type: "Feta or goat cheese optional",
+        section: "NonPerishables",
+      },
+    ],
+    preparationTime: 20,
+    preparationMeasurement: "Minutes",
+    requiredInstruments: [""],
+    instructions: [
+      "Place the zucchini into a large bowl. Drizzle about 3 tablespoon extra virgin olive oil, and sprinkle with cumin (1 tsp).",
+      "Toss with your clean hands to combine.",
+      "Heat a grill or griddle until hot, add zucchini in batches (do not crowd). Grill for 4 minutes or so, turning over a couple of times until zucchini are cooked through and perfectly charred.",
+      "Transfer grilled zucchini back to the bowl.",
+      "Add lemon juice, fresh garlic, salt and pepper. Toss to combine.",
+      "Add fresh herbs and toss again gently.",
+      "Transfer to a serving platter and top with a sprinkle of feta or goat cheese, if you like. Serve at room temperature.",
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+    groceryList: false,
+    calories: 0,
+    resource: "The Mediterranean Dish",
+    resourceLink:
+      "https://www.themediterraneandish.com/grilled-zucchini-salad-mediterranean/#recipe",
+    goToLink: "",
+    otherRecipeLink: "",
+  },
   // {
   //   recipeTitle: 'Template',
   //   ingredients: [
