@@ -3503,7 +3503,38 @@ export const RecipeData = [
     goToLink: "",
     otherRecipeLink: "",
   },
-  // {
+  {
+    recipeTitle: 'Lasagna Soup',
+    ingredients: [
+   { type: 'ground beef', section: "Meat", amount: '1lb' },
+   { type: 'mariana sauce', section: "NonPerishables", amount: '1 jar' },
+   { type: 'chicken broth', section: "NonPerishables", amount: '4 1/2 cups' },
+   { type: 'lasagna noodles', section: "NonPerishables", amount: '6 sheets' },
+   { type: 'mozzarella -shredded', section: "Dairy", amount: 'as needed' },
+
+  ],
+    preparationTime: 30,
+    preparationMeasurement: 'minutes',
+    requiredInstruments: [''],
+    instructions: [
+      'Heat oil (1 tbsp) over medium heat. Add beef to pot, seasoning with salt (1 tsp) and pepper (1/2 tsp) breaking into crumbles',
+      'Cook until no pink remains and beef reacheds a safe internal temp of 160F',
+      'In another pot combine marinara sauce and broth (4 1/2 cups). Bring to just a boil',
+      'Add lasagna noodles reduce heat to medium and cook for approximately 10min',
+      'Add beef to marinara sauce and heat up',
+      'Ladle into bowls and add mozzarella and parsley'
+    ],
+    active: false,
+    lillyRating: 2,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  // resource: "Baked by Melissa",
+  // resourceLink: "https://www.bakedbymelissa.com/blog/green-goddess-salad",
+  goToLink: '',
+  otherRecipeLink: '',
+  },
+    // {
   //   recipeTitle: 'Template',
   //   ingredients: [
   //  { type: '??????', section: "NonPerishables", amount: '?????' },
