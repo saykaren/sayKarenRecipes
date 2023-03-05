@@ -3512,7 +3512,38 @@ export const RecipeData = [
     goToLink: "",
     otherRecipeLink: "",
   },
-  // {
+  {
+    recipeTitle: 'Tortillas',
+    ingredients: [
+      { amount: '2 cups', type: 'flour', section: 'NonPerishables'},
+      { amount: '1 1/4 tsp', type: 'salt', section: 'NonPerishables'},
+      { amount: '1/4 tsp', type: 'baking powder', section: 'NonPerishables'},
+      { amount: '1/4 cup', type: 'softened butter', section: 'NonPerishables'},
+  ],
+    preparationTime: 45,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [''],
+    instructions: [
+      'Mix all ingredients together',
+      'Use fork to cut into it',
+      'Add 2/3 cup Luke warm water',
+      'Stir until sticky dough ball',
+      'Use flour as needed, knead briefly divide into 5 equal parts',
+      'Roll into balls and let rest 30 min',
+      'Cover with tea towel',
+      'Roll flat and put on a hot dry skillet for 30 seconds each side'
+    ],
+    active: false,
+    lillyRating: 3,
+    week: 1,
+  groceryList: false,
+  calories: 0,
+  // resource: "Baked by Melissa",
+  // resourceLink: "https://www.bakedbymelissa.com/blog/green-goddess-salad",
+  goToLink: '',
+  otherRecipeLink: '',
+  },
+    // {
   //   recipeTitle: 'TITLE',
   //   ingredients: [
   //  { type: 'bread', section: "NonPerishables", amount: '4 slices' },
