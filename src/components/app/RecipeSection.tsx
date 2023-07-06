@@ -20,16 +20,17 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   const [data, setData] = useState<RecipeDataInterface[]>(RecipeData);
   const [loading, setLoading] = useState(false);
   const [filteredWeek, setFilteredWeek] = useState<number>(0);
+  const [filteredMealType, setFilteredMealType] = useState<string>("");
   const [activeAllStatus, setActiveAllStatus] = useState(false);
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   useEffect(() => {
     setLoading(false);
-  });
+  }, []);
 
   const updateState = (selectedRecipeName: string, setValue: boolean) => {
     const newData = [...data];
-    newData.map((recipe) => {
+    newData.forEach((recipe) => {
       if (recipe.recipeTitle === selectedRecipeName) {
         recipe.active = setValue;
       }
@@ -46,9 +47,9 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
   };
 
   const clearFilter = () => {
-    setLoading(true);
     setFilteredWeek(0);
     setSearchTerm("");
+    setFilteredMealType("");
   };
 
   const updateActive = (change: boolean) => {
@@ -56,15 +57,6 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
     const newData = RecipeData;
     newData.map((data) => (data.active = change));
     setActiveAllStatus(change);
-  };
-
-  const filterBoolean = (weekNumber: number) => {
-    if (weekNumber > 0) {
-      const newFiltered = RecipeData.filter(
-        (sectionName) => sectionName.week === weekNumber
-      );
-      setFilteredWeek(weekNumber);
-    }
   };
 
   return (
@@ -95,7 +87,9 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
           <select
             id="WeekFilter"
             value={filteredWeek}
-            onChange={(e) => filterBoolean(parseInt(e.currentTarget.value, 10))}
+            onChange={(e) =>
+              setFilteredWeek(parseInt(e.currentTarget.value, 10))
+            }
             placeholder="Search for Recipe"
             className="filterBuddydetail"
           >
@@ -104,6 +98,24 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             <option value={2}>2</option>
             <option value={3}>3</option>
             <option value={4}>4</option>
+          </select>
+        </div>
+        <div className="FilterBuddy">
+          <h4>Recipe Type</h4>
+          <select
+            id="WeekFilter"
+            value={filteredMealType}
+            onChange={(e) => setFilteredMealType(e.currentTarget.value)}
+            placeholder="Search for Recipe"
+            className="filterBuddydetail"
+          >
+            <option value={""}>Select One</option>
+            <option value={"meal"}>Full meal</option>
+            <option value={"side"}>Side</option>
+            <option value={"salad"}>Salad</option>
+            <option value={"dessert"}>Dessert</option>
+            <option value={"smoothie"}>Smoothie</option>
+            <option value={"dressing"}>Dressing</option>
           </select>
           <button onClick={() => clearFilter()} className="buttonClear">
             Clear Filter
@@ -121,12 +133,18 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             .filter((weekNumber) =>
               filteredWeek > 0 ? weekNumber.week === filteredWeek : weekNumber
             )
+            .filter((meal) =>
+              filteredMealType.length > 1
+                ? meal.mealType === filteredMealType
+                : meal
+            )
             .sort((a, b) => a.recipeTitle.localeCompare(b.recipeTitle))
             .map((num, index) => (
               <div className="recipeCard cssFriends" key={`recipeCard${index}`}>
                 <div className="cssCloseFriends">
                   <img
                     className="cssBestFriends"
+                    alt="toggle"
                     src={num.active ? toggleOn : toggleOff}
                     onClick={() => updateState(num.recipeTitle, !num.active)}
                   />
@@ -211,7 +229,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                       <div
                         onClick={() => setSearchTerm(`${num.otherRecipeLink}`)}
                       >
-                          <b>Third Recipe Link: </b>
+                        <b>Third Recipe Link: </b>
                         {num.otherRecipeLink}
                       </div>
                     )}

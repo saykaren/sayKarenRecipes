@@ -364,7 +364,7 @@ export const RecipeData = [
       "Add the stir-fry veggies and pineapple and let them cook in the teriyaki sauce for about 2 minutes. Return the chicken to the pot and serve warm with brown rice.",
     ],
     active: false,
-    mealType: "side",
+    mealType: "meal",
     week: 4,
     lillyRating: 2,
     groceryList: false,

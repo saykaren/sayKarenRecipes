@@ -12,6 +12,7 @@ export interface RecipeDataInterface {
   instructions: Array<string>;
   active: boolean;
   lillyRating?: number;
+  mealType?: string;
   week?: number;
   groceryList?: boolean,
   calories?: number;
