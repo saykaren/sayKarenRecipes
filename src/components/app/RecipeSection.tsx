@@ -113,6 +113,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             <option value={"meal"}>Full meal</option>
             <option value={"side"}>Side</option>
             <option value={"salad"}>Salad</option>
+            <option value={"soup"}>Soup</option>
             <option value={"dessert"}>Dessert</option>
             <option value={"smoothie"}>Smoothie</option>
             <option value={"dressing"}>Dressing</option>
