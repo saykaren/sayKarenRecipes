@@ -218,6 +218,14 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
                         </div>
                       </div>
                     )}
+                    {num.protein && (
+                      <div className={`instructions cssCloseFriends`}>
+                        <div>
+                          <b>Protein: </b>
+                          {num.protein}
+                        </div>
+                      </div>
+                    )}
                     {num.goToLink && (
                       <div className={`instructions cssCloseFriends`}>
                         <div onClick={() => setSearchTerm(`${num.goToLink}`)}>
