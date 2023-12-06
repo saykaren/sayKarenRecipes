@@ -16,6 +16,7 @@ export interface RecipeDataInterface {
   week?: number;
   groceryList?: boolean,
   calories?: number;
+  protein?: number;
   goToLink?: string;
   linkItHere?: string;
   resource?: string;
