@@ -117,6 +117,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             <option value={"dessert"}>Dessert</option>
             <option value={"smoothie"}>Smoothie</option>
             <option value={"dressing"}>Dressing</option>
+            <option value={"veggie"}>Veggie Meal</option>
           </select>
           <button onClick={() => clearFilter()} className="buttonClear">
             Clear Filter
