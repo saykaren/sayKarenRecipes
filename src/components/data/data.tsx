@@ -4757,6 +4757,60 @@ export const RecipeData = [
     goToLink: "",
     otherRecipeLink: "",
   },
+   {
+    recipeTitle: 'Skinny Task Enchilada',
+    ingredients: [
+      {section: 'Produce', amount: '2 ', type: 'garlic cloves, minced'},
+{section: 'NonPerishables', amount: '1-2 tbs', type: 'chipotle chilis in adobo sauce, depending how spicy you like it'},
+{section: 'NonPerishables', amount: '1-1/2 cups ', type: 'tomato sauce'},
+{section: 'NonPerishables', amount: '1/2 tsp ', type: 'chipotle chili powder'},
+{section: 'NonPerishables', amount: '1/2 tsp ', type: 'ground cumin'},
+{section: 'NonPerishables', amount: '3/4 cup ', type: 'reduced sodium chicken broth'},
+{section: 'NonPerishables', amount: '1 tsp ', type: 'extra virgin olive oil'},
+{section: 'Meat', amount: '10 ounces ', type: 'cooked shredded chicken breast, from 2 breasts of a rotisserie chicken or shredded chicken in the slow cooker*'},
+{section: 'Produce', amount: '1 cup ', type: 'diced onion'},
+{section: 'Produce', amount: '2 large cloves ', type: 'garlic, minced'},
+{section: 'Produce', amount: '1/4 cup ', type: 'cilantro'},
+{section: 'NonPerishables', amount: '1 tsp ', type: 'cumin'},
+{section: 'NonPerishables', amount: '1/2 tsp ', type: 'dried oregano'},
+{section: 'NonPerishables', amount: '1 tsp ', type: 'chipotle chili powder'},
+{section: 'NonPerishables', amount: '1/3 cup ', type: 'chicken broth'},
+{section: 'NonPerishables', amount: '1/2 cup ', type: 'tomato sauce'},
+{section: 'NonPerishables', amount: '8', type:' 7-inch whole wheat flour tortillas, (I use low-carb la tortilla factory)'},
+{section: 'Dairy', amount: '1 cup' , type:' part-skim shredded Mexican cheese blend, or cheddar'},
+
+  ],
+    preparationTime: 45,
+    preparationMeasurement: 'Minutes',
+    requiredInstruments: [''],
+    instructions: [
+      'Preheat oven to 400F degrees.',
+    'Spray a medium pot with oil and and add garlic, sauté 30 seconds.',
+    'Add chipotle chiles, chili powder, cumin, chicken broth, tomato sauce, salt and pepper.',
+    'Bring to a boil. Reduce the heat to low and simmer for 5-10 minutes, to let the flavors meld. Set aside until ready to use.',
+    'Heat the oil in a medium skillet over medium-high heat.',
+    'Sauté onions and garlic on low until soft, about 2 minutes.',
+    'Add chicken, salt, cilantro, cumin, oregano, chili powder, tomato sauce, chicken broth, and cook 4 to 5 minutes.',
+    'Remove from heat.',
+    'Spray a 13 by 9-inch glass or ceramic baking dish with oil.',
+    'Put 1/3 cup chicken mixture into each tortilla and roll it.',
+    'Place on baking dish seam side down, top with sauce. Then top with cheese.',
+    'Cover with foil and bake in the oven on the middle rack for 20-25 minutes, until it\'s heated through and the cheese is melted.',
+    'Garnish with scallions or cilantro.',
+    'Optional: top with your favorite toppings if desired. (Extra points) Makes 8 enchiladas.'
+    ],
+    active: false,
+    lillyRating: 3,
+    mealType: 'meal',
+  week: 1,
+  groceryList: false,
+  calories: 0,
+  protein: 0,
+  // resource: "Baked by Melissa",
+  resourceLink: "https://www.skinnytaste.com/chicken-enchiladas/#recipe",
+  goToLink: '',
+  otherRecipeLink: '',
+  },
   //  {
   //   recipeTitle: 'TITLE',
   //   ingredients: [
@@ -4780,7 +4834,6 @@ export const RecipeData = [
   // goToLink: '',
   // otherRecipeLink: '',
   // },
-
   //Frozen / Produce /NonPerishables / Meat / Dairy / Bread
   // Frozen / Produce /NonPerishables / Meat / Dairy / Bread
 ];
