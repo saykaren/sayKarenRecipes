@@ -130,7 +130,7 @@ const RecipeSection = ({ ratingShow, setRatingShow }: RecipeSectionProps) => {
             .filter((item) =>
               item.recipeTitle
                 .toLocaleLowerCase()
-                .includes(searchTerm.toLocaleLowerCase())
+                .includes(searchTerm.toLocaleLowerCase().trim())
             )
             .filter((weekNumber) =>
               filteredWeek > 0 ? weekNumber.week === filteredWeek : weekNumber
